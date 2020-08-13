@@ -1,0 +1,59 @@
+
+
+1)Manual Completion 
+2)Attaching  a callable 
+
+####################################################### 1)Manual Completion #######################################################
+
+ future provides an 
+  ->isDone() method : to check whether the computation is done or not, and a 
+  ->get() method    : to retrieve the result of the computation when it is done. 
+  
+  But if there comes a scenario where you need to complete it manually, Future does not provides any means to do so.
+  
+  
+		  CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(new Supplier<String>() {
+		     //Perform Long Running Task
+		  })
+		 
+		  String result = completableFuture.get(); 
+		  
+		  
+		  Since we know that get() method blocks until the future is complete, the above call will block forever since the future is never completed. 
+		  Therefore, we can use complete() method in order to manually complete the result.
+		  
+		  
+		  CompletableFuture<String> completableFuture = CompletableFuture.supplyAsync(new Supplier<String>() {
+		     //Perform Long Running Task
+		  })
+				
+		  //Wait for 5 seconds 
+			Thread.sleep(5000L);  
+				
+		  //If completableFuture is Not Done in 5 seconds, Complete it Manually and send response 'Unable To Process' else get the result 
+			if(!completableFuture.isDone()) {
+			   System.out.println("Unbale To Process");
+			   completableFuture.complete("Unable To Process");
+			}else{
+			     completableFuture.get();
+			}
+	
+
+ 
+
+####################################################### 2)Attaching  a callable #######################################################
+
+ While using Future, we do not get notified when it is complete neither does it provides us a callable method which will automatically be called when the result is available 
+  
+  BUT 
+  
+  CompletableFuture provides us with a lot of callable methods which can be used as per our use case
+  i)thenApply(Function Interface , Executor-optional)   : Function has a method 'apply()'  : that accepts one argument and returns AN object. 
+  ii)thenAccept(Consumer Interface , Executor-optional)   : Consumer has a method 'accept()' : that accepts one argument and returns     NO result 
+  iii)thenRun(Runnable Interface , Executor-optional)     : Runnable Interface has a method run() : that accepts no argument and returns NO object.
+
+  
+
+
+
+

@@ -1,0 +1,25 @@
+
+
+
+interface Interface1 {	
+	static void staticMethodInInterface(){
+    	System.out.println("Static method in Interface 1");
+    }
+}
+--------------------------------------------------------------
+
+interface Interface2 {
+	static void staticMethodInInterface(){
+    	System.out.println("Static method in Interface 2");
+    }
+}
+
+---------------------------------------------------------------
+
+public class MainClass implements Interface1 ,Interface2{
+	
+	public static void main(String args[]) {
+		 Interface1.staticMethodInInterface();
+		 Interface2.staticMethodInInterface();
+	}
+}

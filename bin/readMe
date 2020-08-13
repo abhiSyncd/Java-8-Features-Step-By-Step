@@ -1,0 +1,152 @@
+################################################ LIST ################################################
+
+ 1 - ITERATING LIST 
+
+  Java 7 - External Iterators 
+
+   - using for-loop
+   - using for-each-loop
+
+
+  Java 7 - Internal Iterators
+
+   - using Iterator
+   - using ListIterator
+
+
+  Java 8 
+
+   -  myList.forEach(using Consumer @FunctionalInterface as anonymous inner class)   
+
+   -  myList.forEach(using Lambda expression) method : which avoid using bulky anonymous class implementations of Consumer @FunctionalInterface
+   
+   -  myList.stream().forEach(using method reference) method
+
+
+ --------------------------------------
+
+  2 - Transforming List 
+
+   Java 7 : using for-each-loop
+
+   Java 8 :
+
+    - myList.stream()
+      .map(using Function @FunctionalInterface as anonymous inner class)
+      .collect(Collectors.toList())
+
+    - myList.stream()
+      .map(using Lambda expression)
+      .collect(Collectors.toList())
+
+  
+  --------------------------------------
+
+  3 - Filtering List 
+    
+   Java 7 : Single and Multiple Filters - using for-each-loop
+
+   Java 8 : Single and Multiple Filters 
+
+      - myList.stream()
+        .filter(using Predicate @FunctionalInterface as anonymous inner class)
+        .collect(Collectors.toList())
+
+      - myList.stream()
+        .filter(using Lambda expression)
+        .collect(Collectors.toList())
+                         
+   
+  --------------------------------------
+
+  4 - Reducing List (Grouping List)
+    
+    Java 7 - using for-each-loop
+
+    Java 8 
+
+     - myList.stream()
+       .reduce(using Lambda expression)
+
+   --------------------------------------
+
+  5 - List of List
+
+    Java 7 - using for-each-loop
+
+    Java 8 
+
+   - myList.stream()
+    .flatMap(using Lambda expression)
+    .collect(Collectors.toList())
+
+
+
+################################################ MAP ################################################
+
+ 1 - ITERATING MAP 
+
+  Java 7 - External Iterators 
+   - using for-each-loop
+      - using maps' keySet
+      - using maps' EntrySet 
+
+
+  Java 7 - Internal Iterators
+   - using Iterator
+
+
+  Java 8 
+
+   -  myMap.forEach(using BiConsumer @FunctionalInterface as anonymous inner class)   
+   
+   -  myMap.forEach(using Lambda expression) method  : which avoid using bulky anonymous class implementations of BiConsumer @FunctionalInterface
+   
+   -  myMap.entrySet().stream().forEach(using method reference) method
+
+
+
+   Note   : Insertion order is not maintained while displaying : Use LinkedHashMap instead
+
+----------------------------------------------
+
+
+2 - Transforming Map 
+
+   Java 7 - using for-each-loop : maps' keySet or maps' EntrySet 
+
+   Java 8 
+
+    - myMap.entrySet().stream()
+      .map()
+      .collect(Collectors.toMap()))Collectors.toMap(using Lambda expression))
+
+
+--------------------------------------
+
+  3 - Filtering Map 
+    
+   Java 7 : Single and Multiple Filters - using for-each-loop : maps' keySet or maps' EntrySet 
+
+   Java 8 : Single and Multiple Filters 
+
+      - myMap.stream()
+        .filter(using Lambda expression)
+        .collect(using Lambda expression)
+                         
+
+
+
+############################################## INTERFACE ##############################################
+
+
+
+1) Before Java 8   : All methods declared in Interfaces was public abstract by default
+
+   Java 8 
+   
+   Static Method   : No need to override in implemented class : can directly call them using object of class that implemented it 
+   
+   Default Method  : No need to override in implemented class : can directly call them using MyInterface.class
+     
+  

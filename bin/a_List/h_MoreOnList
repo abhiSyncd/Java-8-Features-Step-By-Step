@@ -1,0 +1,48 @@
+public class Employee {
+
+    private String name;
+    private String city;
+    private Integer salary;
+    private String department;
+    
+    //Constructors
+	
+	//Getters
+	
+	@Override
+	public String toString() {
+		return "{name=" + name + ", city=" + city + ", salary=" + salary + ", department=" + department + "}";
+	}
+	
+}
+	
+-----------------------------------------------------------------------------------------------------------------
+
+        /**
+         * 1 - More Operations : Map,Filter,Sorted,Limit,Collect 
+         */
+		List<Employee> empList2 = 
+				 empList.stream() 
+				.filter(employee -> "Bangalore".equals(employee.getCity()))
+				.limit(4)
+				.map(e -> new Employee(e.getName().toLowerCase(), e.getCity()))
+				.sorted(Comparator.comparing(Employee::getName))
+				.collect(Collectors.toList());
+		
+		
+		System.out.println(empList2);
+		
+		
+	  /**
+        * 2 - Print Employee with Maximum or Minimum Salary : max() , min()  
+       */
+	   Employee employeeWithMaxSalary = empList
+								      .stream()
+								      .max(Comparator.comparing(Employee::getSalary))
+								      .orElseThrow(NoSuchElementException::new);
+		
+		
+		System.out.println("Employee with Max salalry" + employeeWithMaxSalary);
+		
+	
+	

@@ -1,0 +1,39 @@
+ExecutorService executor = Executors.newCachedThreadPool();
+		  		
+		  List<CompletableFuture<String>> futureList  =  new ArrayList();
+		  
+		  futureList.add(CompletableFuture.supplyAsync(() -> {
+				    try {
+				    	Thread.sleep(5000L);
+				    	return "Response1 From DB in separate Thread";
+				    } catch (Exception e) {
+				        return "Exception Occurred in case of Failures";   
+				    }  
+				},executor));
+				
+
+			
+		  futureList.add(CompletableFuture.supplyAsync(() -> {
+			    try {
+			    	//Thread.sleep(2000L);
+			    	return "Response2 From DB in separate Thread";
+			    } catch (Exception e) {
+			        return "Exception Occurred in case of Failures";   
+			    }  
+			},executor));
+			
+			
+			CompletableFuture<Void> allFutures = CompletableFuture.allOf(futureList.toArray(new CompletableFuture[futureList.size()]));
+			
+			
+			// When all the Futures are completed, call `future.join()` to get their results and collect the results in a list -
+			CompletableFuture<List<String>> allFutureResponseList = allFutures.thenApply(v -> {
+			   return futureList.stream()
+			           .map(pageContentFuture -> pageContentFuture.join())
+			           .collect(Collectors.toList());
+			});
+			
+		
+			System.out.println(allFutureResponseList.get());
+			
+			executor.shutdown();

@@ -1,0 +1,41 @@
+
+Before Java 8 : All the methods of interfaces were public & abstract by default.
+
+Java 8        : You can define a method with its implementation in Interface using either default or static keyword.
+                If a class implements that interface, No need to override default/static method.
+
+Default Method : 
+                               
+Static Method  : 
+ 
+---------------------------------------------------------------
+interface Interface1 {
+
+	void interface1Method();
+
+	default void defaultMethodInInterface() {
+		System.out.println("Default Method in Interface 1");
+	}
+}
+
+----------------------------------------------------------------
+	
+ public class MainClass implements Interface1 {
+
+	@Override
+	public void interface1Method() {
+	}
+
+	public static void main(String args[]) {
+		MainClass mc = new MainClass();
+		mc.defaultMethodInInterface();
+    }
+}	
+	
+----------------------------------------------------
+
+There are still few differences between them, one of them is that abstract class can have constructor while in interfaces we can’t have constructors.
+
+
+
+

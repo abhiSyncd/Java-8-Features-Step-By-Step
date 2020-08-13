@@ -1,0 +1,26 @@
+Do The addition of default methods removes many of the reasons to use abstract classes?
+
+
+CONSTRUCTOR : 
+Abstract classes allow defining constructor 
+Interface do not allow defining constructor 
+
+Can Instantiate Both 
+
+To use both's method in a class       : Extend or Implement in class
+
+To use boths's method inside a method2 : use it as annonymous inner class inside the method2 : Closures in Java
+
+	
+	
+FIELDS : 
+
+Abstract classes allow non-static and non-final fields
+interfaces' fields are inherently public, static, and final
+
+
+METHODS : 
+Abstract classes allows methods to be public, private, or protected
+Interface methods are inherently public.
+
+

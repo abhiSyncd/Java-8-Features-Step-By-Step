@@ -1,0 +1,59 @@
+1)Using  runAsync(Runnable Interface , Executor-optional )    : Runnable Interface has a method run() : that accepts no argument and returns NO object.
+2)Using supplyAsync(Supplier Interface , Executor-optional ) : Supplier Interface Has a method 'get()' : that accepts no  argument and returns AN object.
+
+
+You might be wondering that - Well, I know that the runAsync() and supplyAsync() methods execute their tasks in a separate thread. But, we never created a thread right?
+CompletableFuture executes these tasks in a thread obtained from the global ForkJoinPool.commonPool().
+
+But hey, you can also create a Thread Pool and pass it to runAsync() and supplyAsync() methods to let them execute their tasks in a thread obtained from your thread pool.
+
+All the methods in the CompletableFuture API has two variants - One which accepts an Executor as an argument and one which doesn’t -
+
+
+################################################################ 1 - I - Using supplyAsync ################################################################
+
+
+ --------------------------------------------------- Way 1 : Using Supplier as Anonymous Inner Class  ---------------------------------------------------
+    
+	
+	ExecutorService executor = Executors.newCachedThreadPool();
+		
+		CompletableFuture<String> future = CompletableFuture.supplyAsync(new Supplier<String>() {
+				
+			@Override
+			public String get() {
+			    try {
+					  Thread.sleep(2000L);
+					  //throw new Exception();
+					  return "Response From DB";
+					}
+				catch (Exception e) {
+					return "Exception Occurred in case of Failures";  //If exception occurs in try block future.get() will be get this text
+					}
+			}
+		}, executor);
+			
+			
+		//future.complete("Future's Result"); //Do not wait for future to complete , Manually complete a Future and returns "Future Result" when future.get() is done
+		System.out.println(future.get());
+		
+		executor.shutdown();
+
+ ---------------------------------------------------  Way2 : Using Lambda Expression ---------------------------------------------------
+	
+
+    ExecutorService executor = Executors.newCachedThreadPool();
+		
+	CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
+		    try {
+		    	Thread.sleep(2000L);
+		    	//throw new Exception();
+		    	return "Executing Task1 in seperate Thread";
+		    } catch (Exception e) {
+		        return "Exception Occurred in case of Failures";   
+		    }  
+		},executor);
+		
+	System.out.println(future.get());
+		
+		

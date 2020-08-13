@@ -1,0 +1,58 @@
+
+
+CompletableFuture.get() method is blocking. It waits until the Future is completed and returns the result after its completion.
+
+But, that’s not what we want right? For building asynchronous systems we should be able to attach a callback to the CompletableFuture which should automatically get called when the Future completes.
+
+That way, we won’t need to wait for the result, and we can write the logic that needs to be executed after the completion of the Future inside our callback function.
+
+
+You can attach a callback to the CompletableFuture using 
+
+1)thenApply(Function Interface , Executor-optional)  : Function has a method 'apply()'  : that accepts one argument and returns AN object. 
+2)thenAccept(Consumer Interface , Executor-optional)   : Consumer has a method 'accept()' : that accepts one argument and returns     NO result 
+3)thenRun(Runnable Interface , Executor-optional)      : Runnable Interface has a method run() : that accepts no argument and returns NO object.
+
+
+############################################################ ThenApply() ############################################################
+
+     
+		ExecutorService executor = Executors.newCachedThreadPool();
+			
+			CompletableFuture<String> future1 = CompletableFuture.supplyAsync(() -> {
+				try {
+				      Thread.sleep(2000L);
+				      return "Response From DB in separate Thread";
+				    }catch (Exception e) {
+				      return "Exception Occurred in case of Failures";   
+				    }  
+				},executor);
+					
+					
+					
+			CompletableFuture<String> future2 = future1.thenApply(responseFromFuture1 -> {
+			   return "Response Tranformed: " + responseFromFuture1;
+			});
+			
+			
+		System.out.println(future2.get());
+		
+		executor.shutdown();
+	
+  Here Both future1 and future2 runs in SAME-THREAD, use  thenApplyAsync() to execute future2 in SEPARATE-THREAD. 
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------
+
+
+thenApply()    : Transforming and acting on a CompletableFuture
+thenCompose()  : Combine two dependent futures
+thenCombine()  : Combine two independent futures
+
+
+CompletableFuture.allOf :  
+ List of independent futures that you want to run in parallel and do something after all of them are complete.
+
+
+ 
+	

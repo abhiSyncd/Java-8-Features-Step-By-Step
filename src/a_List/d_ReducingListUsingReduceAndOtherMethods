@@ -1,6 +1,5 @@
 
 The Stream.reduce() method is a reduction operation. 
-The Stream.reduce() method is a reduction operation. 
 A reduction operation takes a sequence of input elements and combines them into a single summary result.
 
 It is similar to SQL like Aggregate Functions : sum(),max(),min(),count,Mean,Median,Mode

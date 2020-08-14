@@ -1,9 +1,6 @@
 
 
 
-      List<Integer> list = Arrays.asList(1, 2);
-
-
  //************************************ 1 : Applying Single Filter : Find Even Number in List  *****************************************
 
  

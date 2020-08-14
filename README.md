@@ -1,6 +1,6 @@
 
 
-## 1 - @Functional Interfaces :: java.util.function package
+
 
     a)What is a Functional Interfaces
 

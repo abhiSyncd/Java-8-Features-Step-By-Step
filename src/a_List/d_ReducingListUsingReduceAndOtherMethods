@@ -1,5 +1,5 @@
 
-
+The Stream.reduce() method is a reduction operation. 
 The Stream.reduce() method is a reduction operation. 
 A reduction operation takes a sequence of input elements and combines them into a single summary result.
 

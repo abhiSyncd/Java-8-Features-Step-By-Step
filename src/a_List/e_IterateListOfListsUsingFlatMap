@@ -1,7 +1,7 @@
 
-  Input  : List<List<String>>  : [[Sachin, Dhoni, Virat], [Warner, Watson, Smith]]
-  
-  Output : List<String>        : [Sachin, Dhoni, Virat, Warner, Watson, Smith]
+	  Input  : List<List<String>>  : [[Sachin, Dhoni, Virat], [Warner, Watson, Smith]]
+
+	  Output : List<String>        : [Sachin, Dhoni, Virat, Warner, Watson, Smith]
 
  //************************************ 1 : Before Java 8 *****************************************
  

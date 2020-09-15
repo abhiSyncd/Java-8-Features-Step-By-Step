@@ -47,7 +47,7 @@
 
 	            
  	
- //************************************ 2 : Applying Multiple Filter : Find Even Number that is > 3 in List  *****************************************
+## 2 : Applying Multiple Filter : Find Even Number that is > 3 in List
  	
  	
  	

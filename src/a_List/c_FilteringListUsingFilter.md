@@ -4,7 +4,7 @@
  ## 1 : Applying Single Filter : Find Even Number in List  
 
  
-   **i)Before Java 8**
+   **i) Before Java 8**
 
 	    List<Integer> list = Arrays.asList(1, 2, 3, 4);
 		List<Integer> transformedList = new ArrayList<>();
@@ -19,7 +19,7 @@
  
  
  
-  **ii)After Java 8**
+  **ii) After Java 8**
   
   
 	    List<Integer> list = Arrays.asList(1, 2, 3, 4);
@@ -51,7 +51,7 @@
  	
  	
  	
- 	// i)Before Java 8
+  **i) Before Java 8**
  	
  	List<Integer> list = Arrays.asList(1, 2, 3, 4);
 	List<Integer> transformedList = new ArrayList<>();
@@ -66,7 +66,7 @@
 		
 		
 	
-	// ii)After Java 8 
+ **ii) After Java 8**
 	
 	List<Integer> list = Arrays.asList(1, 2, 3, 4);
 		
@@ -82,7 +82,7 @@
  	
  	
 
- //************************************ 3 : Combining Filters and Transformation :  Find Double of each 'Even Number greater than 3' in List  *****************************************
+## 3 : Combining Filters and Transformation | Find Double of each 'Even Number greater than 3' in List 
 
 
    // i)Before Java 8 

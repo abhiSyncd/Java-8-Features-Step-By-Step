@@ -76,16 +76,15 @@
 	
  ### 3 - Total Count List Elements
  
- 
 
-     //------------------------- Before Java 8 -------------------------
+   **Before Java 8**
      
        Integer totalCount = list.size();
        System.out.println(list.size());
        
        
      
-     //------------------------- After Java 8 -------------------------
+   **After Java 8**
       
      Integer totalCount = list.stream().count();
      System.out.println(totalCount);
@@ -101,7 +100,7 @@
        Mean = Sum of all values/Total No. of values
      
      
-      //------------------------- Before Java 8 -------------------------
+   **Before Java 8**
        
        Double total = 0.0;
 		 
@@ -114,7 +113,7 @@
        System.out.println(average);
       
          
-    //------------------------- After Java 8 -------------------------  	
+   **After Java 8**  	
        
        //Way 1 : 
          double average1 = list

@@ -1,11 +1,11 @@
 
-The Stream.reduce() method is a reduction operation. 
-A reduction operation takes a sequence of input elements and combines them into a single summary result.
+	The Stream.reduce() method is a reduction operation. 
+	A reduction operation takes a sequence of input elements and combines them into a single summary result.
 
-It is similar to SQL like Aggregate Functions : sum(),max(),min(),count,Mean,Median,Mode
+	It is similar to SQL like Aggregate Functions : sum(),max(),min(),count,Mean,Median,Mode
 
 
- //######################################## 1 - SUM of List Element ########################################
+## 1 - SUM of List Element
 
 
        //------------------------- Before Java 8 -------------------------
@@ -43,7 +43,7 @@ It is similar to SQL like Aggregate Functions : sum(),max(),min(),count,Mean,Med
 	  Integer sum2 = list.stream().mapToInt(Integer::intValue).sum();
 	  
 		
- //######################################## 2 - Find Max and Min in List ########################################		
+## 2 - Find Max and Min in List		
 	
 	
       //------------------------- Before Java 8 -------------------------
@@ -74,7 +74,7 @@ It is similar to SQL like Aggregate Functions : sum(),max(),min(),count,Mean,Med
 	
 	
 	
- //######################################## 3 - Total Count List Elements ########################################
+ ### 3 - Total Count List Elements
  
  
 
@@ -96,7 +96,7 @@ It is similar to SQL like Aggregate Functions : sum(),max(),min(),count,Mean,Med
      
      
      
-//######################################## 4 - Average(MEAN) of all List Elements ########################################
+## 4 - Average(MEAN) of all List Elements 
      
        Mean = Sum of all values/Total No. of values
      
@@ -135,16 +135,16 @@ It is similar to SQL like Aggregate Functions : sum(),max(),min(),count,Mean,Med
 	
 	
 	
-//######################################## 5 - Median of all List Elements ########################################
+## 5 - Median of all List Elements 
  
-Median is the middle number of a group of numbers.
+	Median is the middle number of a group of numbers.
 
-Step 1 : Sort Numbers in order from smallest to largest
-         Count all numbers in array = n;
-  
-Step 2 : Two Possibilities based on count n : 
-        Case I  - There's an odd number of elements in List :  Median  = Middle element =  ((n + 1)/2)th 
-        Case II - There's an even number of elements in List : Median  = Sum of Two Middle Numbers / 2 =  [((n)/2)th item term + ((n)/2 + 1)th item term ]/2
+	Step 1 : Sort Numbers in order from smallest to largest
+		 Count all numbers in array = n;
+
+	Step 2 : Two Possibilities based on count n : 
+		Case I  - There's an odd number of elements in List :  Median  = Middle element =  ((n + 1)/2)th 
+		Case II - There's an even number of elements in List : Median  = Sum of Two Middle Numbers / 2 =  [((n)/2)th item term + ((n)/2 + 1)th item term ]/2
 
 
 

@@ -1,5 +1,5 @@
 
-   List<Integer> list = Arrays.asList(1, 2);
+    List<Integer> list = Arrays.asList(1, 2);
 
   
  ## 1 : External Iterators 

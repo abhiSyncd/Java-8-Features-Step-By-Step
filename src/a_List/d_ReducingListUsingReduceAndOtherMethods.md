@@ -9,8 +9,8 @@
 
 
    **Before Java 8**
-       
-        List<Integer> list = Arrays.asList(1, 2, 3, 4);
+
+       List<Integer> list = Arrays.asList(1, 2, 3, 4);
 		
 	int sum = 0;
 	for (Integer number : list) {

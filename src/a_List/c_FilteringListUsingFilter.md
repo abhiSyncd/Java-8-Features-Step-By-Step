@@ -82,10 +82,11 @@
  	
  	
 
-## 3 : Combining Filters and Transformation | Find Double of each 'Even Number greater than 3' in List 
+## 3 : Combining Filters and Transformation
 
 
-   // i)Before Java 8 
+   **i)Before Java 8 :  Find Double of each 'Even Number greater than 3' in List**
+   
    	List<Integer> list = Arrays.asList(1, 2, 3, 4);
 	List<Integer> transformedList = new ArrayList<>();
 		
@@ -99,8 +100,9 @@
    
 
 
-   // ii)After Java 8 
-    List<Integer> list = Arrays.asList(1, 2, 3, 4);
+   **ii)After Java 8 : :  Find Double of each 'Even Number greater than 3' in List**
+   
+        List<Integer> list = Arrays.asList(1, 2, 3, 4);
 		
 	List<Integer> transformedList = list.stream()
 		            .filter(number -> number>3)

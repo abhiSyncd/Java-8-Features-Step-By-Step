@@ -46,7 +46,7 @@
 ## 2 - Find Max and Min in List		
 	
 	
-      //------------------------- Before Java 8 -------------------------
+   **Before Java 8**
       
        List<Integer> list = Arrays.asList(1, 2, 3, 4);
        
@@ -64,7 +64,7 @@
         System.out.println(min);
       
    	
-      //------------------------- After Java 8 -------------------------
+   **After Java 8**
       
       Optional<Integer> max = list.stream().reduce(Integer::max);
       Optional<Integer> min = list.stream().reduce(Integer::min);

@@ -2,7 +2,7 @@
 
 ## 1 - @Functional Interfaces :: java.util.function package
 
-    a)What is a Functional Interfaces
+     > - a)What is a Functional Interfaces
 
 	    A special kind of interfaces that contains ONLY ONE abstract method.
 	    (Note it may contain many DEFAULT and STATIC methods)
@@ -12,7 +12,7 @@
 
 
 
-    b)Use of Functional Interfaces
+     > - b)Use of Functional Interfaces
  
 	    Used to implement functional programming in Java
 	    In functional programming, functions can exist outside the scope of an object.

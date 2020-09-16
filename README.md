@@ -22,7 +22,8 @@
                To achieve this, we can use LAMBDA Expression, 
 	       to instantiate @Functional Interfaces inside Stream API functions and avoid using bulky anonymous class implementation
 	       
-	       E.x) [Refer](https://github.com/abhiLinkd/Java-Threads-Step-By-Step) : Creating Threads Using "Anonymous Inner Class" | Functional-Interface+Lammbda
+	       E.x) [Refer](https://github.com/abhiLinkd/Java-Threads-Step-By-Step) : 
+	            Creating Threads Using "Anonymous Inner Class" | Functional-Interface+Lammbda
    
    
    > - Java 8 In Built @Functional Interfaces

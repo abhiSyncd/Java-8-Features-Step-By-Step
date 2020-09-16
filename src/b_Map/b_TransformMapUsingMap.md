@@ -1,13 +1,14 @@
 
 
-//https://www.mkyong.com/java8/java-8-filter-a-map-examples/
+     //https://www.mkyong.com/java8/java-8-filter-a-map-examples/
 
 
 
   
- //************************************ 1 : Before Java 8 *****************************************
+## 1 : Before Java 8
  
-      Map<String, Integer> map = new HashMap<String, Integer>();
+                
+		Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("employee1ID", 1);
 		map.put("employee2ID", 2);
 		map.put("employee3ID", 3);
@@ -27,9 +28,10 @@
         Note   : Insertion order is not maintained :  Use LinkedHashMap instead
           
   
-   //************************************ 2 : After Java 8 *****************************************
   
-        Map<String, Integer> map = new HashMap<String, Integer>();
+## 2 : After Java 8
+  
+                Map<String, Integer> map = new HashMap<String, Integer>();
 		map.put("employee1ID", 1);
 		map.put("employee2ID", 2);
 		map.put("employee3ID", 3);

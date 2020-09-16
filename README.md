@@ -135,7 +135,7 @@
 	  
 	  		
 
-
+##
 ## 3 - Lambda Expression
 
    > - Advantage of Lamda Expression 
@@ -145,7 +145,7 @@
         
 	
 	
-	
+##	
 ## 4 - Default and static methods in Interfaces
 
 
@@ -173,7 +173,7 @@
 		 Its to provide utility methods on interface level without creating the object of the interface.
 
         
-	
+##	
 ## 5 - Dates in java.time package
 
 	- Before Java 8 : Date date = new Date() :  Wed Apr 10 11:43:38 IST 2019 
@@ -191,10 +191,10 @@
 
 
 
-
+##
 ## 6 - [CompletableFuture in java.util.concurrent package](https://github.com/abhiLinkd/Java-8-Features-Step-By-Step/tree/master/src/e_CompletableFuture)
 
-
+##
 ## 7 - Collection Improvements 
 
  > - Map Interface added methods
@@ -214,7 +214,7 @@
           - nullsFirst
           - nullsLast
 	  
-	  
+##	  
 ## 8 - [Optional : java.util package](https://github.com/abhiLinkd/Java-8-Features-Step-By-Step/blob/master/src/1_Optional.md)
 
     

@@ -3,8 +3,8 @@
 ##  1 : Applying Single Filter : Find Even Values in Map
 
  
-	 // i)Before Java 8
-
+	 // i)Before Java 8 
+	 
                         Map<String, Integer> map = new HashMap<String, Integer>();
 			map.put("employee1ID", 1);
 			map.put("employee2ID", 2);

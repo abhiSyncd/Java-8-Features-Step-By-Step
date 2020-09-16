@@ -2,12 +2,14 @@
 
           Source : https://stackabuse.com/reading-a-file-line-by-line-in-java/
 
-          PROBLEM  : You have to parse a large CSV file (~90MB), practically read the file, and 
-                    create one Java object for each of the lines. In real life, the CSV file contains around 380,000 lines.
+## PROBLEM  : 
 
-          SOLUTION : 
+    You have to parse a large CSV file (~90MB), practically read the file, and 
+     create one Java object for each of the lines. In real life, the CSV file contains around 380,000 lines.
 
-          private List<YourJavaItem> processInputFile(String inputFilePath) {
+## SOLUTION : 
+
+     private List<YourJavaItem> processInputFile(String inputFilePath) {
 
               List<YourJavaItem> inputList = new ArrayList<YourJavaItem>();
 
@@ -32,9 +34,11 @@
               }
 
               return inputList ;
-          }
+      }
 
+##
           Here,
+          
            lines()        : returns a stream object.
 
            skip(1)        : skips the first line in the CSV file, which in this case is the header of the file.

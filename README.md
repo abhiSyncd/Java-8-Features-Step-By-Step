@@ -1,5 +1,5 @@
 
-
+##
 ## 1 - @Functional Interfaces :: java.util.function package
 
    > - What is a Functional Interfaces
@@ -42,7 +42,7 @@
 
    
    
-
+##
 ## 2 - Stream Interface :: java.util.stream package
 
 

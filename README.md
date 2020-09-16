@@ -192,7 +192,7 @@
 
 
 ##
-## 6 - [CompletableFuture in java.util.concurrent package](https://github.com/abhiLinkd/Java-8-Features-Step-By-Step/tree/master/src/e_CompletableFuture)
+## 6 - [CompletableFuture in java.util.concurrent package](https://github.com/abhiSyncd/Java-8-Features-Step-By-Step/tree/master/src/e_CompletableFuture)
 
 ##
 ## 7 - Collection Improvements 
@@ -215,6 +215,6 @@
           - nullsLast
 	  
 ##	  
-## 8 - [Optional : java.util package](https://github.com/abhiLinkd/Java-8-Features-Step-By-Step/blob/master/src/1_Optional.md)
+## 8 - [Optional : java.util package](https://github.com/abhiSyncd/Java-8-Features-Step-By-Step/blob/master/src/1_Optional.md)
 
     

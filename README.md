@@ -12,7 +12,7 @@
 
 
 
-   > -  Use of Functional Interfaces
+   > - Use of Functional Interfaces
  
 	    Used to implement functional programming in Java
 	    In functional programming, functions can exist outside the scope of an object.
@@ -25,7 +25,7 @@
 	       E.x) [Refer](https://github.com/abhiLinkd/Java-Threads-Step-By-Step) : Creating Threads Using "Anonymous Inner Class" | Functional-Interface+Lammbda
    
    
-   > - c)Java 8 In Built @Functional Interfaces
+   > - Java 8 In Built @Functional Interfaces
           
             -> Consumer   : Has a method 'accept()' : that accepts one argument and returns no result  
             -> Function   : Has a method 'apply()'  : that accepts one argument and returns an object.  
@@ -45,7 +45,7 @@
 ## 2 - Stream Interface :: java.util.stream package
 
 
-   > - a) What is Stream Interface
+   > - What is Stream Interface
      
         Provide common operations from functional programing languages on collections,arrays or I/O resources,
         such as :
@@ -57,7 +57,7 @@
         -> collect(Supplier Interface)       : Convert Stream to collection
    
    
-   > - b) Types of operations in a stream :: Stream return Type
+   > - Types of operations in a stream :: Stream return Type
   
 	    i) Intermediate operations 
 	         : return Stream and 
@@ -89,7 +89,7 @@
 			findAny
 	
 
- > - c) Streams vs Collection
+ > - Streams vs Collection
          
 	 - Streams do not store data
 	   Collection is a data structure used to store, retrieve, manipulate and write back the data.
@@ -104,11 +104,12 @@
 	   Collections have a finite size, streams need not.
  
  
- > -d)Advantage of Streams over loops 
+ > - Advantage of Streams over loops 
+ 
        - Streams are a more declarative style provides better Readability.
 
   
-    e)Streams : Thread Safety and Immutability 
+ > - Streams : Thread Safety and Immutability 
  
 	 i) Streams and Thread Safety  : Streams are not Thread Safe  
 	         We can actually pass a custom ThreadPool when processing the stream: 
@@ -136,7 +137,8 @@
 
 ## 3 - Lambda Expression
 
-    a)Advantage of Lamda Expression 
+   > - Advantage of Lamda Expression 
+   
        - Hides instantiating a functional interface as an anonymous class inside Stream API functions discussed above and
        - provides an inline implementatin for better readability
         
@@ -146,12 +148,12 @@
 ## 4 - Default and static methods in Interfaces
 
 
-    a)Interface Before Java 8  
+   > - Interface Before Java 8  
        
 		All methods declared in Interfaces were public and abstract( Only Declaration and No Body i.e no implementation) by default,
 		which needs to be overridden when any class implements it.
 	
-     b)Interface After Java 8
+   > - Interface After Java 8
    
 		Introduced two more methods in Interfaces,which do not need to overriden in all the class implementing it.
 		But only by the classes who needs to implement it.
@@ -194,14 +196,16 @@
 
 ## 7 - Collection Improvements 
 
-       a)Map Interface added methods
+ > - Map Interface added methods
+ 
 	  - getOrDefault()
 	  - putIfAbsent()
 	  - compute(), computeIfAbsent() and computeIfPresent()
           - replace(), replaceAll(), and remove()
 	  
        
-       b)Comparator Interface added methods
+  > - Comparator Interface added methods
+  
           - comparing() 
           - thenComparing()
           - naturalOrder()

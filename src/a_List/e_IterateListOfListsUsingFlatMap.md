@@ -1,12 +1,12 @@
 
-	  Input  : List<List<String>>  : [[Sachin, Dhoni, Virat], [Warner, Watson, Smith]]
+		  Input  : List<List<String>>  : [[Sachin, Dhoni, Virat], [Warner, Watson, Smith]]
 
-	  Output : List<String>        : [Sachin, Dhoni, Virat, Warner, Watson, Smith]
+		  Output : List<String>        : [Sachin, Dhoni, Virat, Warner, Watson, Smith]
 
- //************************************ 1 : Before Java 8 *****************************************
+ ## 1 : Before Java 8 
  
  
-            List<String> teamIndia     = Arrays.asList("Sachin", "Dhoni", "Virat");
+                        List<String> teamIndia     = Arrays.asList("Sachin", "Dhoni", "Virat");
 			List<String> teamAustralia = Arrays.asList("Warner", "Watson", "Smith");
 
 			List<List<String>> allPlayersList = Arrays.asList(teamIndia,teamAustralia ); // [[Sachin, Dhoni, Virat], [Warner, Watson, Smith]]  OR 
@@ -30,7 +30,7 @@
 
 	
 		
- //************************************ 1 : After Java 8 *****************************************
+ ## 2 : After Java 8 
 		
 		
 		List<String> teamIndia = Arrays.asList("Sachin", "Dhoni", "Virat");

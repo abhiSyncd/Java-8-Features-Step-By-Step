@@ -1,24 +1,25 @@
-public class Employee {
+		
+		public class Employee {
 
-    private String name;
-    private String city;
-    private Integer salary;
-    private String department;
-    
-    //Constructors
-	
-    //Getters
-	
-    @Override
-    public String toString() {
-	return "{name=" + name + ", city=" + city + ", salary=" + salary + ", department=" + department + "}";
-    }
-	
-}
-	
------------------------------------------------------------------------------------------------------------------
+		    private String name;
+		    private String city;
+		    private Integer salary;
+		    private String department;
 
-        List<Employee> empList = Arrays.asList(
+		    //Constructors
+
+		    //Getters
+
+		    @Override
+		    public String toString() {
+			return "{name=" + name + ", city=" + city + ", salary=" + salary + ", department=" + department + "}";
+		    }
+
+		}
+	
+##
+
+                List<Employee> empList = Arrays.asList(
                 new Employee("Naveen"  , "Bangalore" , 100000  ,  "Finance"),
                 new Employee("Vinod"   , "Bangalore" , 80000   ,  "IT"),
                 new Employee("Nitin"   , "Bangalore" , 50000   ,  "IT"),
@@ -27,7 +28,7 @@ public class Employee {
                 new Employee("Gaurav"  , "Bokaro"    , 5000    ,  "HR")
                 );
 
------------------------------------------------------------------------------------------------------------------
+##
 
         /**
          * 1 - More Operations : Map,Filter,Sorted,Limit,Collect 
@@ -43,7 +44,7 @@ public class Employee {
 		
 		System.out.println(empList2);
 		
------------------------------------------------------------------------------------------------------------------
+##
 		
        /**
         * 2 - Print Employee with Maximum or Minimum Salary : max() , min()  
@@ -58,7 +59,7 @@ public class Employee {
 		
 	
 	
------------------------------------------------------------------------------------------------------------------
+##
 
 	/**
 	 * Get 3 Employees with Lowest Salary 
@@ -72,7 +73,7 @@ public class Employee {
 	    System.out.println(empList3);
 	
 	
------------------------------------------------------------------------------------------------------------------
+##
 	
 	 /**
 	  * Get 3 Employees with Top salaries

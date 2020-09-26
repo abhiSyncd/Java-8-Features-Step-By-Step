@@ -1,3 +1,5 @@
+https://thepracticaldeveloper.com/2018/02/24/differences-between-completablefuture-future-and-streams/
+
 ## 1 - Manual Completion
 
    **Overview**

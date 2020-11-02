@@ -12,7 +12,7 @@
 
 
 
-  > - **1-b) Use of Functional Interfaces**
+  > - 1-b) Use of Functional Interfaces
  
     Used to implement functional programming in Java
     In functional programming, functions can exist outside the scope of an object.
@@ -26,7 +26,7 @@
         Creating Threads Using "Anonymous Inner Class" | Functional-Interface+Lammbda
    
    
-  > - **1-c) Java 8 In Built @Functional Interfaces**
+  > - 1-c) Java 8 In Built @Functional Interfaces
           
     -> Consumer   : Has a method 'accept()' : that accepts one argument and returns no result  
     -> Function   : Has a method 'apply()'  : that accepts one argument and returns an object.  
@@ -46,7 +46,7 @@
 # 2 - Stream Interface :: java.util.stream package
 
 
-   > - What is Stream Interface
+   > - 2-a) What is Stream Interface
      
     Provide common operations from functional programing languages on collections,arrays or I/O resources,
     such as :
@@ -58,7 +58,7 @@
     -> collect(Supplier Interface)       : Convert Stream to collection
    
    
-   > - Types of operations in a stream :: Stream return Type
+   > - 2-b) Types of operations in a stream :: Stream return Type
   
     i) Intermediate operations 
        : return Stream and 
@@ -90,7 +90,7 @@
 		findAny
 	
 
- > - Streams vs Collection
+ > - 2-c)  Streams vs Collection
          
     - Streams do not store data
       Collection is a data structure used to store, retrieve, manipulate and write back the data.
@@ -105,12 +105,12 @@
       Collections have a finite size, streams need not.
  
  
- > - Advantage of Streams over loops 
+ > - 2-d) Advantage of Streams over loops 
  
     - Streams are a more declarative style provides better Readability.
 
   
- > - Streams : Thread Safety and Immutability 
+ > - 2-e) Streams : Thread Safety and Immutability 
  
     i) Streams and Thread Safety  : Streams are not Thread Safe  
        We can actually pass a custom ThreadPool when processing the stream: 

@@ -2,7 +2,7 @@
 ##
 # 1 - @Functional Interfaces | java.util.function package
 
-  **1-a) What is a Functional Interfaces**
+  > - **1-a) What is a Functional Interfaces**
 
     A special kind of interfaces that contains ONLY ONE abstract method.
     Note : it may contain many DEFAULT and STATIC methods
@@ -12,7 +12,7 @@
 
 
 
-  **1-b) Use of Functional Interfaces**
+  > - **1-b) Use of Functional Interfaces**
  
     Used to implement functional programming in Java
     In functional programming, functions can exist outside the scope of an object.
@@ -26,7 +26,7 @@
         Creating Threads Using "Anonymous Inner Class" | Functional-Interface+Lammbda
    
    
-  **1-c) Java 8 In Built @Functional Interfaces**
+  > - **1-c) Java 8 In Built @Functional Interfaces**
           
     -> Consumer   : Has a method 'accept()' : that accepts one argument and returns no result  
     -> Function   : Has a method 'apply()'  : that accepts one argument and returns an object.  

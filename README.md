@@ -1,6 +1,6 @@
 
 ##
-## 1 - @Functional Interfaces :: java.util.function package
+# 1 - @Functional Interfaces :: java.util.function package
 
    > - What is a Functional Interfaces
 
@@ -43,7 +43,7 @@
    
    
 ##
-## 2 - Stream Interface :: java.util.stream package
+# 2 - Stream Interface :: java.util.stream package
 
 
    > - What is Stream Interface
@@ -136,7 +136,7 @@
 	  		
 
 ##
-## 3 - Lambda Expression
+# 3 - Lambda Expression
 
    > - Advantage of Lamda Expression 
    
@@ -146,7 +146,7 @@
 	
 	
 ##	
-## 4 - Default and static methods in Interfaces
+# 4 - Default and static methods in Interfaces
 
 
    > - Interface Before Java 8  
@@ -174,7 +174,7 @@
 
         
 ##	
-## 5 - Dates in java.time package
+# 5 - Dates in java.time package
 
      - Before Java 8 : Date date = new Date() :  Wed Apr 10 11:43:38 IST 2019 
 	                  Problem with Date class : Is a Mutable class hence it is Not Thread Safe
@@ -192,10 +192,10 @@
 
 
 ##
-## 6 - [CompletableFuture in java.util.concurrent package](https://github.com/abhiSyncd/Java-8-Features-Step-By-Step/tree/master/src/e_CompletableFuture)
+# 6 - [CompletableFuture in java.util.concurrent package](https://github.com/abhiSyncd/Java-8-Features-Step-By-Step/tree/master/src/e_CompletableFuture)
 
 ##
-## 7 - Collection Improvements 
+# 7 - Collection Improvements 
 
  > - Map Interface added methods
  
@@ -215,6 +215,6 @@
     - nullsLast
 	  
 ##	  
-## 8 - [Optional : java.util package](https://github.com/abhiSyncd/Java-8-Features-Step-By-Step/blob/master/src/1_Optional.md)
+# 8 - [Optional : java.util package](https://github.com/abhiSyncd/Java-8-Features-Step-By-Step/blob/master/src/1_Optional.md)
 
     

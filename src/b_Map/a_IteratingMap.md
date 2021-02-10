@@ -75,7 +75,7 @@
 
 
 	     Output : 
-		      employee2ID:2
+                  employee2ID:2
 		  employee1ID:1
 		  employee4ID:4
 		  employee3ID:3   
@@ -97,8 +97,23 @@
 		 Note : Insertion Order is not Maintained : Use LinkedHashMap instead
 
 
+        // iii) Using If Else inside ForEach Method 
+	        map.entrySet().stream()
+	        .forEach(
+	                pair -> {
+	                    if (pair.getValue() != null) {
+	                    	
+	                    } else {
+	                       
+	                    }
+	                }
+	        ); 
+                
+		//You can remove stream() above
 
-	// iii)using Stream API's stream() : No stream function for Map<String,String>
+
+
+ Note : using Stream API's stream() : No stream function for Map<String,String>
 
 
 		      

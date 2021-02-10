@@ -20,8 +20,8 @@
 	   List<Integer> list = Arrays.asList(1, 2, 3);
 
 	   List<Integer> transformedList = list.stream()                                  
-						   .map(number-> number*2)       
-						   .collect(Collectors.toList());
+                                           .map(number-> number*2)       
+                                           .collect(Collectors.toList());
 
 	   System.out.println(transformedList);
 

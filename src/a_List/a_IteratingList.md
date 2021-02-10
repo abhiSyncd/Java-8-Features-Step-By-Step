@@ -59,13 +59,14 @@
 		 
 		 
 		 //Using If-Else Inside For-Each
-		   list.stream().forEach(number -> {
-			  if(number % 2 == 0) {
+		   list.stream()
+		   .forEach(number -> {
+			        if(number % 2 == 0) {
 				  System.out.println("Even number : "+ number);
-              }else {
-            	  System.out.println("ODD Number :" + number);
-              }  
-		  });  	
+                                }else {
+            	                  System.out.println("ODD Number :" + number);
+                                 }  
+		            });  	
 			
 					
 			

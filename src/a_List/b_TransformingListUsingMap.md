@@ -27,20 +27,21 @@
 
 
 	   Here, 
-	   ->list.stream()                : convert List<Integer> to  Stream<Integer>
+	   ->list.stream()               : convert List<Integer> to  Stream<Integer>
 
-	   ->map(number-> number*2)       :can also be written as without using Lambda expression : 
-					   using @Function Interface  Function : That Has a method 'apply()' : that accepts one argument and returns an object
+	   ->map(number-> number*2)      : can also be written as without using Lambda expression : 
+					   using @Function Interface  Function : 
+					   That Has a method 'apply()' : that accepts one argument and returns an object
 
-								      .map(new Function<Integer, Integer>() {
-										    public Integer apply(Integer number) {
-											return number*2;
-										    }
-									   }) 
+					   .map(new Function<Integer, Integer>() {
+						public Integer apply(Integer number) {
+						  return number*2;
+						}
+					    }) 
 
-									   Here <Integer, Integer>	    		
-						       First Integer   : type of the input to the function
-						       Second Integer  : type of the result of the function
+					    Here <Integer, Integer>	    		
+					    First Integer   : type of the input to the function
+					    Second Integer  : type of the result of the function
 
 
 	   ->collect(Collectors.toList()) : convert Stream<Object> back to List<Integer> 

@@ -10,17 +10,32 @@ public class MyMain {
 
 	public static void main(String[] args) {
 
+		List<Employee> list = new ArrayList<>();
+		list.add(new Employee(1, "Nitin", 80000));
+		list.add(new Employee(2, "Abhi", 50000));
+		
+		
+		/**
+		 * Converting List To List : Selecting Few Attributes
+		 *  EmployeeDTO : Class contains only Name and salary attribute
+		 */
+		
+		List<EmployeeDTO> list1 = list.stream()
+                                          .map(emp -> new Employee(emp.getName(), emp.getSalary()))
+                                          .collect(Collectors.toList());
+		
+		System.out.println(list1);
+		
+		
 		/**
 		 * Converting List to Map in Java 8 
 		 */
-		List<Employee> list1 = new ArrayList<>();
-		list1.add(new Employee(1, "Nitin", 80000));
-		list1.add(new Employee(2, "Abhi", 50000));
 		
-		 Map<Integer, Employee> map1 = list1.stream()
-				                      .collect(Collectors.toMap(Employee::getId, employee->employee));
+		 Map<Integer, Employee> map1 = list.stream()
+                                              .collect(Collectors.toMap(Employee::getId, employee->employee));
 		
 		System.out.println("ListToMap -> " + map1);
+		
 		
 		/**
 		 * Converting Map to List in Java 8
@@ -30,15 +45,11 @@ public class MyMain {
 		map2.put(2, new Employee(2, "Abhi", 50000));
 		
 		
-		List<Employee> list2 = 	map2.entrySet().stream()
-						       .map(e -> e.getValue())
-						       .collect(Collectors.toList());
+		List<Employee> list2 = map2.entrySet().stream()
+				       .map(e -> e.getValue())
+				       .collect(Collectors.toList());
 		
 		System.out.println("MapToList -> " + list2);
-		
-		 
-		 
-		
 
 	}
 

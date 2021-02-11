@@ -18,6 +18,7 @@ public class MyMain {
 		/**
 		 * Converting List To List : Selecting Few Attributes
 		 *  EmployeeDTO : Class contains only Name and salary attribute
+		 *  Refer : https://roytuts.com/how-to-map-custom-query-results-into-dto-in-spring-data-jpa/
 		 */
 		
 		List<EmployeeDTO> list1 = list.stream()

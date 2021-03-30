@@ -3,7 +3,7 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
 ##
 # 1 - @Functional Interfaces | java.util.function package
 
-  ## a) What is a Functional Interfaces
+  ## (a) What is a Functional Interfaces
 
     A special kind of interfaces that contains ONLY-ONE-ABSTRACT-Method
     Note : it may contain many DEFAULT and STATIC methods
@@ -13,7 +13,7 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
 
 
 
-  ## b) Use of Functional Interfaces
+  ## (b) Use of Functional Interfaces
  
     Used to implement functional programming in Java
     In functional programming, functions can exist outside the scope of an object.
@@ -27,7 +27,7 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
         Creating Threads Using "Anonymous Inner Class" | Functional-Interface+Lammbda
    
    
-  ## c) Java 8 In Built @Functional Interfaces
+  ## (c) Java 8 In Built @Functional Interfaces
           
     -> Consumer   : Has a method 'accept()' : that accepts one argument and returns no result  
     -> Function   : Has a method 'apply()'  : that accepts one argument and returns an object.  
@@ -47,7 +47,7 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
 # 2 - Stream Interface :: java.util.stream package
 
 
-   > - a) What is Stream Interface
+   ## (a) What is Stream Interface
      
     Provide common operations from functional programing languages on collections,arrays or I/O resources,
     such as :
@@ -59,7 +59,7 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
     -> collect(Supplier Interface)       : Convert Stream to collection
    
    
-   > - b) Types of operations in a stream :: Stream return Type
+   ## (b) Types of operations in a stream :: Stream return Type
   
     i) Intermediate operations 
        : return Stream and 
@@ -91,7 +91,7 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
 		findAny
 	
 
- > - c)  Streams vs Collection
+  ## (c)  Streams vs Collection
          
     - Streams do not store data
       Collection is a data structure used to store, retrieve, manipulate and write back the data.
@@ -106,12 +106,12 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
       Collections have a finite size, streams need not.
  
  
- > - d) Advantage of Streams over loops 
+  ## (d) Advantage of Streams over loops 
  
     - Streams are a more declarative style provides better Readability.
 
   
- > - e) Streams : Thread Safety and Immutability 
+  ## (e) Streams : Thread Safety and Immutability 
  
     i) Streams and Thread Safety  : Streams are not Thread Safe  
        We can actually pass a custom ThreadPool when processing the stream: 
@@ -139,8 +139,7 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
 ##
 # 3 - Lambda Expression
 
-   > - Advantage of Lamda Expression 
-   
+     Advantage of Lamda Expression 
     - Hides instantiating a functional interface as an anonymous class inside Stream API functions discussed above and
     - provides an inline implementatin for better readability
         
@@ -150,12 +149,12 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
 # 4 - Default and static methods in Interfaces
 
 
-   > - Interface Before Java 8  
+   ## (a) Interface Before Java 8  
        
        All methods declared in Interfaces were public and abstract( Only Declaration and No Body i.e no implementation) by default,
        which needs to be overridden when any class implements it.
 	
-   > - Interface After Java 8
+  ## (b) Interface After Java 8
    
        Introduced two more methods in Interfaces,which do not need to overriden in all the class implementing it.
        But only by the classes who needs to implement it.

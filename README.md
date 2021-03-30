@@ -5,7 +5,7 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
 
   > - a) What is a Functional Interfaces
 
-    A special kind of interfaces that contains ONLY ONE abstract method.
+    A special kind of interfaces that contains ONLY-ONE-ABSTRACT-Method
     Note : it may contain many DEFAULT and STATIC methods
 
     If an interface is annotated with @FunctionalInterface annotation and 

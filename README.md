@@ -197,15 +197,14 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
 ##
 # 7 - Collection Improvements 
 
- > - Map Interface added methods
+ ## (a) Map Interface added methods
  
     - getOrDefault()
     - putIfAbsent()
     - compute(), computeIfAbsent() and computeIfPresent()
     - replace(), replaceAll(), and remove()
 	  
-       
-  > - Comparator Interface added methods
+ ## (b) Comparator Interface added methods
   
     - comparing() 
     - thenComparing()

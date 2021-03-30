@@ -3,7 +3,7 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
 ##
 # 1 - @Functional Interfaces | java.util.function package
 
-  > - a) What is a Functional Interfaces
+  ## a) What is a Functional Interfaces
 
     A special kind of interfaces that contains ONLY-ONE-ABSTRACT-Method
     Note : it may contain many DEFAULT and STATIC methods
@@ -13,7 +13,7 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
 
 
 
-  > - b) Use of Functional Interfaces
+  ## b) Use of Functional Interfaces
  
     Used to implement functional programming in Java
     In functional programming, functions can exist outside the scope of an object.
@@ -27,7 +27,7 @@ https://www.javachinna.com/java-8-stream-functions-with-examples/
         Creating Threads Using "Anonymous Inner Class" | Functional-Interface+Lammbda
    
    
-  > - c) Java 8 In Built @Functional Interfaces
+  ## c) Java 8 In Built @Functional Interfaces
           
     -> Consumer   : Has a method 'accept()' : that accepts one argument and returns no result  
     -> Function   : Has a method 'apply()'  : that accepts one argument and returns an object.  

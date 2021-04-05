@@ -8,3 +8,14 @@
       } catch (IOException e) {
           e.printStackTrace();
       }
+
+#
+
+    A simple variation if you want to read from InputStream
+
+        try (BufferedReader buffer = new BufferedReader(new InputStreamReader(input))) {
+            return buffer.lines().map(line ->
+                    Arrays.asList(line.split(",")))
+                    .collect(Collectors.toList());
+        }
+    }

@@ -7,42 +7,41 @@
 
 # 1 - SUM of List Element
 
-
-   **Before Java 8**
+## Before Java 8
    
-     List<Integer> list = Arrays.asList(1, 2, 3, 4);
+    List<Integer> list = Arrays.asList(1, 2, 3, 4);
      
-     int sum = 0;
-     for (Integer number : list) {
-       sum = sum + number;  // sum1+=sum1
-     }	
+    int sum = 0;
+    for (Integer number : list) {
+      sum = sum + number;          // sum1+=sum1
+    }	
 
-     System.out.println(sum);  //10
+    System.out.println(sum);       //10
 		
 
 
-   **After Java 8**
+## After Java 8
+
+**Way 1 : : Using reduce**
 
     List<Integer> list = Arrays.asList(1, 2, 3, 4);
     
-    //Way 1 - Using Reduce()
-    
     Integer sum =  list.stream()
-	               .reduce(0 , (x,y) -> x+y);
+                   .reduce(0 , (x,y) -> x+y);
 		  
-    System.out.println(sum);
-		
-Note Here,
+    System.out.println(sum);       //10
+    
+    
+    Here,
+    First Parameter in reduce() : Identity Value
+    The identity element is both the initial value of the reduction and the default result if there are no elements in the stream.
+    -For Addition       : Identity value will be 0
+    -For Multiplication : Identity value will be 1
+	
+**Way 2 : : Using Stream**
 
-	i)First Parameter in reduce() : Identity Value
-	  The identity element is both the initial value of the reduction and the default result if there are no elements in the stream.
-	 -For Addition       : Identity value will be 0
-	 -For Multiplication : Identity value will be 1
-	
-	
-	//Using Stream's
-	  Integer sum1 = list.stream().mapToInt(number -> number.intValue()).sum(); //OR
-	  Integer sum2 = list.stream().mapToInt(Integer::intValue).sum();
+    Integer sum1 = list.stream().mapToInt(number -> number.intValue()).sum(); //OR
+    Integer sum2 = list.stream().mapToInt(Integer::intValue).sum();
 	  
 		
 # 2 - Find Max and Min in List		

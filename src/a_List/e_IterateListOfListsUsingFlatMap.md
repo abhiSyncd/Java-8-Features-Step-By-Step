@@ -33,8 +33,9 @@
     List<String> teamAustralia = Arrays.asList("Warner", "Watson", "Smith");
     
     List<List<String>> allPlayersList = Arrays.asList(teamIndia, teamAustralia);
+    
     List<String> flatMapList = allPlayersList.stream()
-                              .flatMap(pList -> pList.stream())
-			      .collect(Collectors.toList());
+                               .flatMap(pList -> pList.stream())
+			       .collect(Collectors.toList());
     
     System.out.println("All Players - > " + flatMapList);

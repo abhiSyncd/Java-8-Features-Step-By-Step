@@ -1,13 +1,17 @@
-package main;
+# Employee.java
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.stream.Collectors;
+    public class Employee {  
+      private String name;
+      private String city;
+      private String department;
+      private int salary;
+      
+      // Getters | Setters | ToString
+    }
 
-public class MyMain {
+# MyMain.java
+
+    public class MyMain {
 	public static void main(String[] args) {
 
 	  List<Employee> empList = Arrays.asList(
@@ -19,14 +23,16 @@ public class MyMain {
              new Employee("Gaurav"  , "Bokaro"   , "HR"      , 5000)
            );
 
-                   
-	// Now let's group all person by Department   
-        Map<String,List<Employee>> personByDepartment = new HashMap<>();
+# Problem 1 : Group all Employees by Department       
+
+        Map<String,List<Employee>> groupEmployeeByDepartment = new HashMap<>();
         
         groupEmployeeByDepartment =  empList.stream()
                                      .collect(Collectors.groupingBy(Employee::getDepartment));
 				     
-        System.out.println(groupEmployeeByDepartment);
+        groupEmployeeByDepartment.forEach((key,value) -> System.out.println(key + ":" + value));
+#
+
         /**
 	 *
 	 * Output : 
@@ -97,26 +103,6 @@ public class MyMain {
 
 }
 
-/**
-  Employee.java 
-  
-  public class Employee {
-  
-    private String name;
-    private String city;
-    private String department;
-    private int salary;
-    
-    //Constructor
-    
-    //Getters
-     
-    @Override
-	public String toString() {
-		return "{name=" + name + ", city=" + city + ", department=" + department + ", salary=" + salary + "}";
-	}
-	
-*/
 
 
  /*

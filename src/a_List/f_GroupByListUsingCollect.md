@@ -102,14 +102,15 @@
 
 #
     More on Collectors 
+    - Collectors.groupingBy()
+    - Collectors.mapping()
+
     - Collectors.partitioningBy()
     - Collectors.counting() 
     - Collectors.maxBy()/minBy()
     - Collectors.joining()
     - Collectors.collectingAndThen()
     - Collectors.averagingInt() /averagingLong() /averagingDouble()
-    - Collectors.toCollection()
-    - Collectors.mapping()
-    
+
     Refer : 
     https://www.javabrahman.com/java-8/java-8-grouping-with-collectors-groupingby-method-tutorial-with-examples/

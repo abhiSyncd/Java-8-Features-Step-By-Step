@@ -18,7 +18,6 @@
  # 2 : Internal Iterators  
 		
     (a) Using Iterator
-
         Iterator<Integer> iter = list.iterator();
         while (iter.hasNext()) {
           System.out.println(iter.next());
@@ -26,7 +25,6 @@
 		
 		
     (b) Using ListIterator
-
         ListIterator<Integer> iter = list.listIterator();
         while (iter.hasNext()) {
            System.out.println(iter.next());
@@ -54,7 +52,7 @@
 		
 			
 			
-## (c) Using Stream API's stream() : Here stream() converts List<Integer> to  Stream<Integer>
+**(c) Using Stream API's stream()** : Here stream() converts List<Integer> to  Stream<Integer>
      
          list.stream().forEach(System.out::println);
 

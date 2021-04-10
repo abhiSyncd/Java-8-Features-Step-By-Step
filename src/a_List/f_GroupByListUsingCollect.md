@@ -23,7 +23,8 @@
              new Employee("Gaurav"  , "Bokaro"   , "HR"      , 5000)
            );
 
-# Problem 1 : Group all Employees by Department       
+
+# Problem 1 : Group Employees by Department & Get all Employees   
 
     Map<String,List<Employee>> groupEmployeeByDepartment = new HashMap<>();
         
@@ -31,8 +32,7 @@
                                 .collect(Collectors.groupingBy(Employee::getDepartment));
 				     
     groupEmployeeByDepartment.forEach((key,value) -> System.out.println(key + ":" + value));
-	
-#
+
  Output : 
 
      {
@@ -52,53 +52,52 @@
 	  ]
        }
 
-#
-        List<Employee> flatMapList = personByDepartmentMap.values().stream()
-				.flatMap(pList -> pList.stream())
-				.collect(Collectors.toList());
-        
-        System.out.println(flatMapList);
-        
-        
-        /**
-         * [
-         *  {name=Naveen, city=Bangalore, department=Finance, salary=100000},
-         *  {name=Saurav, city=Dhanbad, department=HR, salary=10000}, 
-         *  {name=Gaurav, city=Bokaro, department=HR, salary=5000}, 
-         *  {name=Vinod, city=Indore, department=IT, salary=80000}, 
-         *  {name=Nitin, city=Bangalore, department=IT, salary=50000}, 
-         *  {name=Abhishek, city=Patna, department=IT, salary=20000}
-         * ]
-         */
-         
-   }
 
-}
+# Problem 2 : Group Employees by Department & Get all Employee Names   
+
+    Map<String, List<String>> groupEmployeeByDepartment = new HashMap<>();
+
+    groupEmployeeByDepartment = empList.stream()
+                                .collect(Collectors.groupingBy(
+                                         Employee::getDepartment,
+                                         Collectors.mapping(Employee::getName, Collectors.toList())
+                                ));
+							    
+
+    Output : 
+    {
+     "Finance" : [ "Naveen" ],
+     "HR"      : [ "Saurav", "Gaurav" ],
+     "IT"      : [ "Vinod", "Nitin", "Abhishek" ]
+    }
+    
+    
+    The groupingBy operation in this example takes two parameters
+    - a classification function
+    - an instance of Collector
 
 
 
- /*
- 
- Refer at end of this File * 
-   Map<String,List<String>> GroupOnlyNamesByDepartment =  empList.stream()
-							  .collect(Collectors.groupingBy(
-								     Employee::getDepartment , 
-								     Collectors.mapping(
-								        Employee::getName,
-								        Collectors.toList())));
-															   
-															   
-  Output : 
-  {
-  "Finance" : [ "Naveen" ],
-  "HR"      : [ "Saurav", "Gaurav" ],
-  "IT"      : [ "Vinod", "Nitin", "Abhishek" ]
-  }
+# Problem 3 : Using FlatMap 
   
-  The groupingBy operation in this example takes two parameters
-   i)a classification function
-   ii)an instance of Collector
-   
-   For more info : https://docs.oracle.com/javase/tutorial/collections/streams/reduction.html
- 
-*/
+    Map<String,List<Employee>> groupEmployeeByDepartment = new HashMap<>();
+
+    List<Employee> flatMapList = groupEmployeeByDepartment.values().stream()
+                                 .flatMap(pList -> pList.stream())
+				 .collect(Collectors.toList());
+
+    System.out.println(flatMapList);
+
+    /**
+     * [
+     *  {name=Naveen, city=Bangalore, department=Finance, salary=100000},
+     *  {name=Saurav, city=Dhanbad, department=HR, salary=10000}, 
+     *  {name=Gaurav, city=Bokaro, department=HR, salary=5000}, 
+     *  {name=Vinod, city=Indore, department=IT, salary=80000}, 
+     *  {name=Nitin, city=Bangalore, department=IT, salary=50000}, 
+     *  {name=Abhishek, city=Patna, department=IT, salary=20000}
+     * ]
+     */
+         
+
+

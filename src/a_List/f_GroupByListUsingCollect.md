@@ -22,7 +22,8 @@
              new Employee("Saurav"  , "Dhanbad"  , "HR"      , 10000),
              new Employee("Gaurav"  , "Bokaro"   , "HR"      , 5000)
            );
-
+        } 
+    }
 
 # Problem 1 : Group Employees by Department & Get all Employees   
 

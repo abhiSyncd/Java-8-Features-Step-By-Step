@@ -25,32 +25,32 @@
 
 # Problem 1 : Group all Employees by Department       
 
-        Map<String,List<Employee>> groupEmployeeByDepartment = new HashMap<>();
+    Map<String,List<Employee>> groupEmployeeByDepartment = new HashMap<>();
         
-        groupEmployeeByDepartment =  empList.stream()
-                                     .collect(Collectors.groupingBy(Employee::getDepartment));
+    groupEmployeeByDepartment =  empList.stream()
+                                .collect(Collectors.groupingBy(Employee::getDepartment));
 				     
-        groupEmployeeByDepartment.forEach((key,value) -> System.out.println(key + ":" + value));
+    groupEmployeeByDepartment.forEach((key,value) -> System.out.println(key + ":" + value));
 	
 #
  Output : 
 
-	{
-	  "Finance": [
+     {
+       "Finance": [
 	    { "name": "Naveen", "city": "Bangalore", "department": "Finance", "salary": 100000 }
-	  ],
+	  ], 
 	  
-	  "HR": [
+       "HR": [
 	    {  "name": "Saurav", "city": "Dhanbad", "department": "HR", "salary": 10000 },
 	    {  "name": "Gaurav", "city": "Bokaro",  "department": "HR", "salary": 5000  }
 	  ],
 	  
-	  "IT": [
+       "IT": [
 	    { "name": "Vinod",    "city": "Indore",    "department": "IT", "salary": 80000 },
 	    { "name": "Nitin",    "city": "Bangalore", "department": "IT", "salary": 50000 },
 	    { "name": "Abhishek", "city": "Patna",     "department": "IT", "salary": 20000 }
 	  ]
-	}
+       }
 
 #
         List<Employee> flatMapList = personByDepartmentMap.values().stream()

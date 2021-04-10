@@ -4,14 +4,14 @@
   
  # 1 : External Iterators 
  
-## (a) for-loop
+**(a) for-loop**
     
         for (int i = 0; i < list.size(); i++) {
              System.out.println(list.get(i));
         }
 
 
-## (b) for-each-loop : TO-DO : Difference :
+**(b) for-each-loop**
     
         for (int number : list) {
            System.out.println(number);

@@ -4,32 +4,32 @@
   
  # 1 : External Iterators 
  
-**(a) for-loop**
-    
-        for (int i = 0; i < list.size(); i++) {
-             System.out.println(list.get(i));
+    (a) for-loop
+        
+	for (int i = 0; i < list.size(); i++) {
+           System.out.println(list.get(i));
         }
 
 
-**(b) for-each-loop**
-    
-        for (int number : list) {
-           System.out.println(number);
-        }
+   (b) for-each-loop
+   
+       for (int number : list) {
+          System.out.println(number);
+       }
 		
 				
  # 2 : Internal Iterators  
 		
-**(a) Using Iterator**
-        
-	Iterator<Integer> iter = list.iterator();
+    (a) Using Iterator
+
+        Iterator<Integer> iter = list.iterator();
         while (iter.hasNext()) {
-           System.out.println(iter.next());
+          System.out.println(iter.next());
         }
 		
 		
-**(b) Using ListIterator**
-      
+    (b) Using ListIterator
+
         ListIterator<Integer> iter = list.listIterator();
         while (iter.hasNext()) {
            System.out.println(iter.next());

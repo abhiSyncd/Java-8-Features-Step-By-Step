@@ -46,10 +46,9 @@
 	  ],
 	  
 	  "IT": [
-	    { "name": "Vinod",    "city": "Indore",    "department": "IT", "salary": 80000  },
+	    { "name": "Vinod",    "city": "Indore",    "department": "IT", "salary": 80000 },
 	    { "name": "Nitin",    "city": "Bangalore", "department": "IT", "salary": 50000 },
-	    { "name": "Abhishek", "city": "Patna",     "department": "IT", "salary": 20000
-	    }
+	    { "name": "Abhishek", "city": "Patna",     "department": "IT", "salary": 20000 }
 	  ]
 	}
 

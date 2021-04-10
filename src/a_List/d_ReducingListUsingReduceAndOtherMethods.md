@@ -9,29 +9,31 @@
 
 
    **Before Java 8**
+   
+     List<Integer> list = Arrays.asList(1, 2, 3, 4);
+     
+     int sum = 0;
+     for (Integer number : list) {
+       sum = sum + number;  // sum1+=sum1
+     }	
 
-       List<Integer> list = Arrays.asList(1, 2, 3, 4);
-		
-	int sum = 0;
-	for (Integer number : list) {
-	    sum = sum + number;  // sum1+=sum1
-	}	
-		  	  
-	System.out.println(sum);  //10
+     System.out.println(sum);  //10
 		
 
 
    **After Java 8**
-	
-	List<Integer> list = Arrays.asList(1, 2, 3, 4);
-	
-	//Way 1 - Using Reduce()
-	Integer sum =  list.stream()
+
+    List<Integer> list = Arrays.asList(1, 2, 3, 4);
+    
+    //Way 1 - Using Reduce()
+    
+    Integer sum =  list.stream()
 	               .reduce(0 , (x,y) -> x+y);
 		  
-	System.out.println(sum);
+    System.out.println(sum);
 		
-	Note Here,
+Note Here,
+
 	i)First Parameter in reduce() : Identity Value
 	  The identity element is both the initial value of the reduction and the default result if there are no elements in the stream.
 	 -For Addition       : Identity value will be 0

@@ -77,8 +77,36 @@
     - an instance of Collector
 
 
+# Problem 3 : Sort Employee by Value (Name)
 
-# Problem 3 : Using FlatMap 
+    Map<String,List<Employee>> groupEmployeeByDepartment = new HashMap<>();
+    groupEmployeeByDepartment =  empList.stream()
+                                 .sorted(Comparator.comparing(Employee::getName))         
+                                 .collect(Collectors.groupingBy(Employee::getDepartment));
+
+    //Decreasing Order : //.sorted(Comparator.comparing(Employee::getName).reversed())
+    
+   Output :
+   
+       {
+        "Finance": [
+	      { "name": "Naveen", "city": "Bangalore", "department": "Finance", "salary": 100000 }
+	  ], 
+	  
+       "HR": [
+              {  "name": "Gaurav", "city": "Bokaro",  "department": "HR", "salary": 5000  }
+	      {  "name": "Saurav", "city": "Dhanbad", "department": "HR", "salary": 10000 },
+	  ],
+	  
+       "IT": [
+              { "name": "Abhishek", "city": "Patna",     "department": "IT", "salary": 20000 }
+	      { "name": "Nitin",    "city": "Bangalore", "department": "IT", "salary": 50000 },
+	      { "name": "Vinod",    "city": "Indore",    "department": "IT", "salary": 80000 }, 
+	  ]
+       }
+       
+
+# Problem 4 : Using FlatMap 
   
     Map<String,List<Employee>> groupEmployeeByDepartment = new HashMap<>();
 

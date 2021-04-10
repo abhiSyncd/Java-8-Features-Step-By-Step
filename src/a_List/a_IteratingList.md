@@ -11,7 +11,7 @@
         }
 
 
-   (b) for-each-loop
+    (b) for-each-loop
    
        for (int number : list) {
           System.out.println(number);

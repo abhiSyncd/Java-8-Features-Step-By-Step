@@ -24,7 +24,8 @@
       You can also sort entries in their reverse order by just reversing the Comparator using the Collections.reverseOrder() method or Comparator.reversed() method of Java 8.
 
 # 2 - Sort By Value 
-
+      
+      https://javarevisited.blogspot.com/2017/09/java-8-sorting-hashmap-by-values-in.html#axzz6rcP3BjwZ
 
 
 # 3 - Get Entry where Value is Maximum

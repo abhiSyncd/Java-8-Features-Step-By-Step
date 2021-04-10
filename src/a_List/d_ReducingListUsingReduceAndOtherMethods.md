@@ -5,7 +5,7 @@
 	It is similar to SQL like Aggregate Functions : sum(),max(),min(),count,Mean,Median,Mode
 
 
-## 1 - SUM of List Element
+# 1 - SUM of List Element
 
 
    **Before Java 8**
@@ -43,7 +43,7 @@
 	  Integer sum2 = list.stream().mapToInt(Integer::intValue).sum();
 	  
 		
-## 2 - Find Max and Min in List		
+# 2 - Find Max and Min in List		
 	
 	
    **Before Java 8**
@@ -74,7 +74,7 @@
 	
 	
 	
- ### 3 - Total Count List Elements
+ # 3 - Total Count List Elements
  
 
    **Before Java 8**
@@ -95,7 +95,7 @@
      
      
      
-## 4 - Average(MEAN) of all List Elements 
+# 4 - Average(MEAN) of all List Elements 
      
        Mean = Sum of all values/Total No. of values
      
@@ -134,7 +134,7 @@
 	
 	
 	
-## 5 - Median of all List Elements 
+# 5 - Median of all List Elements 
  
 	Median is the middle number of a group of numbers.
 

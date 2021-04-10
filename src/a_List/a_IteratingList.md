@@ -2,7 +2,7 @@
     List<Integer> list = Arrays.asList(1, 2);
 
   
- ## 1 : External Iterators 
+ # 1 : External Iterators 
  
 		// i)for-loop
 		for (int i = 0; i < list.size(); i++) {
@@ -16,7 +16,7 @@
 		}
 		
 				
- ## 2 : Internal Iterators  
+ # 2 : Internal Iterators  
 		
 		// i)Using Iterator
 		Iterator<Integer> iter = list.iterator();
@@ -32,7 +32,7 @@
 		}
 	
 	
- ## 3 : Using Java 8 
+ # 3 : Using Java 8 
 			
 			
 		// i)Using Consumer @FunctionalInterface as Anonymous inner class : It accepts one argument and returns no result

@@ -33,7 +33,7 @@
   Output : 
   
      [
-       {
+        {
          "1": { "name": "Naveen", "city": "Bangalore", "department": "Finance", "salary": 100000 },
          "2": { "name": "Vinod",  "city": "Indore",    "department": "IT",      "salary": 80000 },
          "3": { "name": "Nitin",  "city": "Bangalore", "department": "IT",      "salary": 50000 }

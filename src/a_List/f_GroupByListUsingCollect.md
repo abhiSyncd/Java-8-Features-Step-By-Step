@@ -33,54 +33,27 @@
         groupEmployeeByDepartment.forEach((key,value) -> System.out.println(key + ":" + value));
 	
 #
+ Output : 
 
 	{
 	  "Finance": [
-	    {
-	      "name": "Naveen",
-	      "city": "Bangalore",
-	      "department": "Finance",
-	      "salary": 100000
-	    }
+	    { "name": "Naveen", "city": "Bangalore", "department": "Finance", "salary": 100000 }
 	  ],
 	  
 	  "HR": [
-	    {
-	      "name": "Saurav",
-	      "city": "Dhanbad",
-	      "department": "HR",
-	      "salary": 10000
-	    },
-	    {
-	      "name": "Gaurav",
-	      "city": "Bokaro",
-	      "department": "HR",
-	      "salary": 5000
-	    }
+	    {  "name": "Saurav", "city": "Dhanbad", "department": "HR", "salary": 10000 },
+	    {  "name": "Gaurav", "city": "Bokaro",  "department": "HR", "salary": 5000  }
 	  ],
 	  
 	  "IT": [
-	    {
-	      "name": "Vinod",
-	      "city": "Indore",
-	      "department": "IT",
-	      "salary": 80000
-	    },
-	    {
-	      "name": "Nitin",
-	      "city": "Bangalore",
-	      "department": "IT",
-	      "salary": 50000
-	    },
-	    {
-	      "name": "Abhishek",
-	      "city": "Patna",
-	      "department": "IT",
-	      "salary": 20000
+	    { "name": "Vinod",    "city": "Indore",    "department": "IT", "salary": 80000  },
+	    { "name": "Nitin",    "city": "Bangalore", "department": "IT", "salary": 50000 },
+	    { "name": "Abhishek", "city": "Patna",     "department": "IT", "salary": 20000
 	    }
 	  ]
 	}
-         
+
+#
         List<Employee> flatMapList = personByDepartmentMap.values().stream()
 				.flatMap(pList -> pList.stream())
 				.collect(Collectors.toList());

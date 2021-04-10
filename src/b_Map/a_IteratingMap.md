@@ -1,7 +1,4 @@
 
-	//https://www.geeksforgeeks.org/differences-between-hashmap-and-hashtable-in-java/
-
-
 	     Map<String, Integer> map = new HashMap<String, Integer>();
 		 map.put("employee1ID", 1);
 		 map.put("employee2ID", 2);

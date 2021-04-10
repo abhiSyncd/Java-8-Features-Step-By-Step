@@ -4,14 +4,14 @@
   
  # 1 : External Iterators 
  
-    (a) for-loop
+## (a) for-loop
     
         for (int i = 0; i < list.size(); i++) {
              System.out.println(list.get(i));
         }
 
 
-    (b) for-each-loop : TO-DO : Difference :
+## (b) for-each-loop : TO-DO : Difference :
     
         for (int number : list) {
            System.out.println(number);
@@ -20,7 +20,7 @@
 				
  # 2 : Internal Iterators  
 		
-    (a) Using Iterator
+## (a) Using Iterator
         
 	Iterator<Integer> iter = list.iterator();
         while (iter.hasNext()) {
@@ -28,7 +28,7 @@
         }
 		
 		
-    (b) Using ListIterator
+## (b) Using ListIterator
       
         ListIterator<Integer> iter = list.listIterator();
         while (iter.hasNext()) {
@@ -38,16 +38,16 @@
 	
  # 3 : Using Java 8 
 			
-     (a) Using Consumer @FunctionalInterface as Anonymous inner class : It accepts one argument and returns no result
+## (a) Using Consumer @FunctionalInterface as Anonymous inner class : It accepts one argument and returns no result
 
-         list.stream().forEach(new Consumer<Integer>() {
+       list.stream().forEach(new Consumer<Integer>() {
                public void accept(Integer number) {
                     System.out.println(number);
                }
          });	
 		
 		
-     (b) Using Lambda expression to instantiate Consumer @FunctionalInterface and avoid using bulky anonymous class implementations
+## (b) Using Lambda expression to instantiate Consumer @FunctionalInterface and avoid using bulky anonymous class implementations
 		
          list.stream().forEach((Integer number) -> System.out.println(number));   //OR
 	 list.stream().forEach((number) -> System.out.println(number));           //OR
@@ -57,7 +57,7 @@
 		
 			
 			
-     (c) Using Stream API's stream() : Here stream() converts List<Integer> to  Stream<Integer>
+## (c) Using Stream API's stream() : Here stream() converts List<Integer> to  Stream<Integer>
      
          list.stream().forEach(System.out::println);
 

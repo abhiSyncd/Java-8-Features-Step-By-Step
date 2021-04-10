@@ -4,8 +4,8 @@
   
  # 1 : External Iterators
  
-    (a) for-loop  
-	for(int i = 0; i < list.size(); i++) {
+    (a) for-loop
+        for(int i = 0; i < list.size(); i++) {
           System.out.println(list.get(i));
         }
 

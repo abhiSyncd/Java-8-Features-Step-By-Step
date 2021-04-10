@@ -1,6 +1,3 @@
-
-https://www.javachinna.com/java-8-stream-functions-with-examples/
-https://www.javabrahman.com/java-8/java-8-grouping-with-collectors-groupingby-method-tutorial-with-examples/
 ##
 # 1 - @Functional Interfaces | java.util.function package
 
@@ -219,4 +216,7 @@ https://www.javabrahman.com/java-8/java-8-grouping-with-collectors-groupingby-me
 ##	  
 # 8 - [Optional : java.util package](https://github.com/abhiSyncd/Java-8-Features-Step-By-Step/blob/master/src/1_Optional.md)
 
-    
+# 
+    Other Sources : 
+    https://www.javachinna.com/java-8-stream-functions-with-examples/
+    https://www.javabrahman.com/java-8/java-8-grouping-with-collectors-groupingby-method-tutorial-with-examples/

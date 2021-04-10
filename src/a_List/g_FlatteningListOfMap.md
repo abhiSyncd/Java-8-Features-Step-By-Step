@@ -51,7 +51,7 @@
                                            .flatMap(object -> object.entrySet().stream())
                                            .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue));
 
-Output 1 : flattenedList
+## Output 1 : flattenedList
   
     {
       "1": { "name": "Naveen", "city": "Bangalore", "department": "Finance", "salary": 100000},
@@ -62,7 +62,7 @@ Output 1 : flattenedList
       "6": { "name": "Gaurav",   "city": "Bokaro",  "department": "HR",      "salary": 5000  }
     }
     
-Output 2 : flattenedList.values()
+## Output 2 : flattenedList.values()
  
     [
       "1": { "name": "Naveen", "city": "Bangalore", "department": "Finance", "salary": 100000},

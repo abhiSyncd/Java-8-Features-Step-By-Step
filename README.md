@@ -203,6 +203,7 @@
     - putIfAbsent()
     - compute(), computeIfAbsent() and computeIfPresent()
     - replace(), replaceAll(), and remove()
+    More Info : https://dzone.com/articles/how-to-use-java-hashmap-effectively
 	  
  ## (b) Comparator Interface added methods
   

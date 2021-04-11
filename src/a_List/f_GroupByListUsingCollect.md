@@ -86,6 +86,7 @@
                                  .collect(Collectors.groupingBy(Employee::getDepartment));
 
     //Decreasing Order : //.sorted(Comparator.comparing(Employee::getName).reversed())
+    For More Info : https://dzone.com/articles/how-to-sort-a-map-by-value-in-java-8?utm_source=dzone&utm_medium=article&utm_campaign=java-collections-cluster
     
    Output :
    

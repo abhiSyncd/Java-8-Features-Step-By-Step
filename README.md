@@ -204,9 +204,9 @@
       Content of that bucket switches from using a linked list of entry Objects to the BALANCED TREE.
       Balanced Tree improves the worst case performance o(n) to o(logn)
 
-    - Added Methods 
+    - Added Methods
+      >putIfAbsent() 
       >getOrDefault()
-      >putIfAbsent()
       >compute(), computeIfAbsent() and computeIfPresent()
       >replace(), replaceAll(), and remove()
     

@@ -111,26 +111,26 @@
   
   ## (2-e) Streams : Thread Safety and Immutability 
  
-    i) Streams and Thread Safety  : Streams are not Thread Safe  
-       We can actually pass a custom ThreadPool when processing the stream: 
-       created using Fork-Join or Executor-Service
-		 
-    ii) Streams and Immutability : 
-		 
-        By default, most Stream API Collectors represent mutable collection strategies — 
-        but what happens if one wants to collect elements to an immutable data structure
-	       
-	Before Java 10 : 
-	var unmodifiableList = Stream.of(42)
-                   .collect(Collectors.collectingAndThen(Collectors.toList(),Collections::unmodifiableList));
-		   
-	After Java 10 
-	toUnmodifiableList() , toUnmodifiableMap(), toUnmodifiableSet()
-	var collect = Stream.of(42).collect(Collectors.toUnmodifiableList());
-				
-				
-        For More Info : 
-	https://dzone.com/articles/java-10-immutableunmodifiable-stream-api-collector
+	@) Streams and Thread Safety  : Streams are not Thread Safe  
+	   We can actually pass a custom ThreadPool when processing the stream: 
+	   created using Fork-Join or Executor-Service
+
+	@) Streams and Immutability : 
+
+	   By default, most Stream API Collectors represent mutable collection strategies — 
+	   but what happens if one wants to collect elements to an immutable data structure
+
+	   Before Java 10 : 
+	   var unmodifiableList = Stream.of(42)
+				  .collect(Collectors.collectingAndThen(Collectors.toList(),Collections::unmodifiableList));
+
+	   After Java 10 
+	   toUnmodifiableList() , toUnmodifiableMap(), toUnmodifiableSet()
+	   var collect = Stream.of(42).collect(Collectors.toUnmodifiableList());
+
+
+	   For More Info : 
+	   https://dzone.com/articles/java-10-immutableunmodifiable-stream-api-collector
 	  
 
 ## (2-f) Parallel Streams

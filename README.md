@@ -1,7 +1,7 @@
 ##
 # 1 - @Functional Interfaces | java.util.function package
 
-  ## (a) What is a Functional Interfaces
+  ## (1-a) What is a Functional Interfaces
 
     A special kind of interfaces that contains ONLY-ONE-ABSTRACT-Method
     Note : it may contain many DEFAULT and STATIC methods

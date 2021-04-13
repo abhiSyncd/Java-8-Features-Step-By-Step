@@ -198,13 +198,19 @@
 # 7 - Collection Improvements 
 
  ## (a) Map Interface added methods
- When the number of Nodes in a particular hash Bucket grows beyond the threshold(TREEIFY_THRESHOLD = 8). Content of that bucket switches from using a linked list of entry Objects to the BALANCED TREE
-3.Balanced Tree improves the worst case performance o(n) to o(logn)
-    - getOrDefault()
-    - putIfAbsent()
-    - compute(), computeIfAbsent() and computeIfPresent()
-    - replace(), replaceAll(), and remove()
-    More Info : https://dzone.com/articles/how-to-use-java-hashmap-effectively
+
+    - LikedList replaced by BalancedTree
+      When the number of Nodes in a particular hash Bucket grows beyond the threshold(TREEIFY_THRESHOLD = 8). 
+      Content of that bucket switches from using a linked list of entry Objects to the BALANCED TREE.
+      Balanced Tree improves the worst case performance o(n) to o(logn)
+
+    - Added Methods 
+      >getOrDefault()
+      >putIfAbsent()
+      >compute(), computeIfAbsent() and computeIfPresent()
+      >replace(), replaceAll(), and remove()
+    
+     More Info : https://dzone.com/articles/how-to-use-java-hashmap-effectively
 	  
  ## (b) Comparator Interface added methods
   

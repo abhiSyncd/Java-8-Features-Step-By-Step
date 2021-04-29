@@ -8,6 +8,13 @@
 	    .sorted(Comparator.comparing(Employee::getName))
 	    .collect(Collectors.toList());
 		
+           
+	   Dual Sorting 
+	  .sorted(Comparator
+	          .comparing(Employee::getAge)
+                  .thenComparing(Employee::getName)
+	         );
+        
 		
 ## 2 - Print Employee with Maximum or Minimum Salary : max() , min() 
 

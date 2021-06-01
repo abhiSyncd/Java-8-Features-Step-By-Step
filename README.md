@@ -179,12 +179,18 @@
 # 5 - Dates in java.time package
 
      - Before Java 8 : Date date = new Date() :  Wed Apr 10 11:43:38 IST 2019 
-	                  Problem with Date class : Is a Mutable class hence it is Not Thread Safe
+	               Problem :
+		       - Date Class is in  Packages java.util and java .sql, So Creates Confusion
+		       - Gives Both Date+Time
+		       - Is a Mutable class hence it is Not Thread Safe
 			  
      - Java 8 and after : 
-       -> LocalDate localdate = LocalDate.now();             :  2019-04-10
-       -> LocalTime localTime = LocalTime.now();             :  11:43:38.549
-       -> LocalDateTime localdateTime = LocalDateTime.now(); :  2019-04-10T11:43:38.549
+       -> LocalDate localdate = LocalDate.now();             :  2019-04-10              : Gives only Date
+       -> LocalTime localTime = LocalTime.now();             :  11:43:38.549            : Gives Only Time
+       -> LocalDateTime localdateTime = LocalDateTime.now(); :  2019-04-10T11:43:38.549 : Gives Both Date + Time
+       
+       Furthermore 
+       It has many Other Functionalities
 
      In Javascript 
        - new Date()                               : Wed Apr 10 2019 11:54:47 GMT+0530 (India Standard Time)  

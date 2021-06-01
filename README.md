@@ -195,7 +195,7 @@
      In Javascript 
        - new Date()                               : Wed Apr 10 2019 11:54:47 GMT+0530 (India Standard Time)  
        - new Date().toISOString()                 : 2019-04-10T06:24:47.236Z  
-       - new Date().toISOString().substring(0,10) : 2019-04-10
+       - new Date().toISOString().substring(0,10) : 2019-04-10                  // Same as Java's LocalDate 
 
 
 

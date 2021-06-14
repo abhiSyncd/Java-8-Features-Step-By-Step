@@ -1,8 +1,4 @@
 
-	https://www.youtube.com/watch?v=9ueIL0SwEWI
-	https://www.youtube.com/watch?v=-nDVy45eOYQ
-
-
 # 1 - Exception When CF is not Chained with Callback
 
 	CompletableFuture <String> future = CompletableFuture.supplyAsync(()->{
@@ -104,3 +100,11 @@
 	Oops!We have an exception - java.lang.ArithmeticException: / by zero
 	
 	DONE
+	
+
+# 
+       Sources : 
+	https://www.youtube.com/watch?v=9ueIL0SwEWI
+	https://www.youtube.com/watch?v=-nDVy45eOYQ
+
+

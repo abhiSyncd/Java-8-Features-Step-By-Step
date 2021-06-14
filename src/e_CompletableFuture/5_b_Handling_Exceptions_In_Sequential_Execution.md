@@ -94,6 +94,8 @@
 
 # 2 - Using handle 
 
+**Example 1**
+
 	CompletableFuture.supplyAsync(()-> {
 	    System.out.println("supplyAsync executing");
 	    return "result from suuplyAsync";
@@ -118,6 +120,40 @@
 	    }
 	});
 
+
+**Example 2**
+
+	CompletableFuture.supplyAsync(() - > {
+		System.out.println("supplyAsync executing");
+		return "result from suuplyAsync";
+	    }).thenApply(result - > {
+		System.out.println("thenApply 1 executing");
+		System.out.println("thenApply 1 : result from supplyAsync : " + result);
+		int number = 9 / 0;
+		return "result from thenApply 1";
+	    })
+	    .handle((result, ex) - > {
+		if (result != null) {
+		    System.out.println(result);
+		    return result;
+		} else {
+		    System.out.println("Exception Caught");
+		    return "Error handling";
+		}
+	    })
+	    .thenApply(result - > {
+		System.out.println("thenApply 2 : executing");
+		System.out.println("thenApply 2 : result from thenApply1 : " + result);
+		return "result from thenApply 2";
+         });
+	 
+	 OUTPUT : 
+	 supplyAsync executing
+	 thenApply 1 executing
+	 thenApply 1 : result from supplyAsync : result from suuplyAsync
+	 Exception Caught
+	 thenApply 2 : executing
+	 thenApply 2 : result from thenApply1 : Error handling
 
 
 

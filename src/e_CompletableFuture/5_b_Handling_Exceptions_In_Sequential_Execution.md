@@ -1,5 +1,5 @@
 
-# 1 -  Exception When CF is Chained with Callback 
+# 1 -  Using exceptionally
 
 ## Case 1 : Exception caught in supplyAsync : Executing Callback
   
@@ -38,11 +38,13 @@
 	    System.out.println("supplyAsync executing");
 	    int number = 9 / 0;
 	    return "result from supplyAsync";
-	}).thenApply(result->{
+	})
+	.thenApply(result->{
 	    System.out.println(" thenApply Callback : executing");
 	    System.out.println("thenApply Callback : result from supplyAsync -> " + result);
 	    return " result from thenApply";
-	}).exceptionally(ex-> {
+	})
+	.exceptionally(ex-> {
 	    System.out.println("Oops! We have an exception in supplyAsync - " + ex.getMessage());
 	    return "Unknown!";
 	});
@@ -60,20 +62,24 @@
       
 **Example 2 :** 
 
-	CompletableFuture.supplyAsync(() - > {
+	CompletableFuture.supplyAsync(()-> {
 	    System.out.println("supplyAsync executing");
 	    int number = 9 / 0;
 	    return "result from suuplyAsync";
-	}).thenApply(result - > {
+	})
+	.thenApply(result-> {
 	    System.out.println("thenApply 1 executing");
 	    return "result from thenApply 1";
-	}).thenApply(result - > {
+	})
+	.thenApply(result-> {
 	    System.out.println("thenApply 2 executing");
 	    return "result from thenApply 2";
-	}).exceptionally(ex - > {
+	})
+	.exceptionally(ex-> {
 	    System.out.println("Oops! We have an exception - " + ex.getMessage());
 	    return "IN VALID!";
-	}).thenAccept(result - > {
+	})
+	.thenAccept(result-> {
 	    System.out.println("DONE");
 	});
 
@@ -84,6 +90,38 @@
 	
 	DONE
 	
+
+
+# 2 - Using handle 
+
+	CompletableFuture.supplyAsync(()-> {
+	    System.out.println("supplyAsync executing");
+	    return "result from suuplyAsync";
+	})
+	.thenApply(result-> {
+	    System.out.println("thenApply 1 executing");
+	    System.out.println("thenApply 1 : result from supplyAsync : " + result);
+	    return "result from thenApply 1";
+	})
+	.thenApply(result-> {
+	    System.out.println("thenApply 2 : executing");
+	    System.out.println("thenApply 2 : result from thenApply1 : " + result);
+	    return "result from thenApply 2";
+	})
+	.handle((result, ex)-> {
+	    if (result != null) {
+		System.out.println(result);
+		return result;
+	    } else {
+		System.out.println("Exception Caught");
+		return "Error handling: " + ex.getMessage();
+	    }
+	});
+
+
+
+
+
 
 # 
        Sources : 

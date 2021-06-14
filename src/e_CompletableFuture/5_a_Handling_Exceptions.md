@@ -22,7 +22,7 @@
   
 # 2 -  Exception When CF is Chained with Callback 
 
-  **Case 1 : Exception caught in supplyAsync : Entering Callback**
+  **Case 1 : Exception caught in supplyAsync : Executing Callback**
 
 	 CompletableFuture < String > future = CompletableFuture.supplyAsync(() - > {
 	     System.out.println("supplyAsync executing");
@@ -49,7 +49,7 @@
           result from thenApply
 
 
-  **Case 2 : Exception caught in supplyAsync : Not Entering Callback**
+  **Case 2 : Exception caught in supplyAsync : Not Executing Callback**
 
 	   CompletableFuture < String > future = CompletableFuture.supplyAsync(() - > {
 	       System.out.println("supplyAsync executing");

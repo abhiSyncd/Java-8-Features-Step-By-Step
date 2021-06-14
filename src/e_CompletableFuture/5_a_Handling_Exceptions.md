@@ -14,10 +14,9 @@
 	});
 	System.out.println(future.get());
 	
-   Output :
-   
-    Oops! We have an exception - java.lang.ArithmeticException: / by zero
-    Unknown!
+       OUTPUT :
+       Oops! We have an exception - java.lang.ArithmeticException: / by zero
+       Unknown!
 
   
   

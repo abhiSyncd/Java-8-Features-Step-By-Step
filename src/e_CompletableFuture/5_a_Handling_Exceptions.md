@@ -13,8 +13,9 @@
 	    return "Unknown!";
 	});
 	System.out.println(future.get());
-#	
-    Output : 
+	
+   Output :
+   
     Oops! We have an exception - java.lang.ArithmeticException: / by zero
     Unknown!
 

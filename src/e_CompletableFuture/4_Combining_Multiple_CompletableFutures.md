@@ -26,7 +26,7 @@
 ## Example 2 : anyOf() :  
 
     CompletableFuture<Integer> future1 = CompletableFuture.supplyAsync(() -> {
-           Thread.sleep(3000L);
+           Thread.sleep(10000L);
            return 50;
     });		
     CompletableFuture<Integer> future2 = CompletableFuture.supplyAsync(() -> 40);  
@@ -34,12 +34,7 @@
 
 
     CompletableFuture<Object> firstCompletedFuture = CompletableFuture.anyOf(future1, future2, future3);
-    try {
-        System.out.println("The first completed future value is " + firstCompletedFuture.get());   // 40
-    } catch (Exception e) {
-        e.printStackTrace();
-    }
-
-    System.out.println("Code that should be executed after any of the futures complete.");
-
+    
+    System.out.println("The first completed future value is " + firstCompletedFuture.get());   // 40
+    
                

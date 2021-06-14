@@ -99,7 +99,7 @@
 		
 		
 	
-## 5 - [Next Section](https://github.com/abhiLinkd/Java-8-Features-Step-By-Step/blob/master/src/e_CompletableFuture/3_b_Attaching_Callback_To_Completablefuture.md)
+## 5 - [Next Section](https://github.com/abhiSyncd/Java-8-Features-Step-By-Step/blob/master/src/e_CompletableFuture/3_b_Attaching_Callback_To_Completablefuture.md)
 
 
 

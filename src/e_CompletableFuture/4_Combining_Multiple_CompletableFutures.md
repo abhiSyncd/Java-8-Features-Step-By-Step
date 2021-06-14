@@ -1,14 +1,12 @@
+	Need: Parallel Execution
 
-      Need : Parallel Execution
-      
-      Summary
-      (a) Running multiple futures in parallel and do something after all of them are complete.
-          > allOf()
-	  > join() : prefferred
-      
-      (b) Running multiple futures in parallel but The first completedFuture which completes will be returned.
-          > anyOf()
-	  
+	Summary
+	    (a) Running multiple futures in parallel and do something after all of them are complete.
+		> allOf()
+		> join(): prefferred
+
+	    (b) Running multiple futures in parallel but The first completedFuture which completes will be returned         > anyOf()
+
 	  
 ## Example - 1 - join()  
                	      

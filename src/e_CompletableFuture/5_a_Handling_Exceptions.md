@@ -3,7 +3,7 @@
 	https://www.youtube.com/watch?v=-nDVy45eOYQ
 
 
-# 1 - Exception When CF is not Chained Chaining
+# 1 - Exception When CF is not Chained with Callback
 
 	CompletableFuture <String> future = CompletableFuture.supplyAsync(() - > {
 	    int number = 9/0;

@@ -5,10 +5,10 @@
 
 # 1 - Without Chaining
 
-	CompletableFuture < String > future = CompletableFuture.supplyAsync(() - > {
-	    int number = 9 / 0;
+	CompletableFuture <String> future = CompletableFuture.supplyAsync(() - > {
+	    int number = 9/0;
 	    return "Some result";
-	}).exceptionally(ex - > {
+	}).exceptionally(ex -> {
 	    System.out.println("Oops! We have an exception - " + ex.getMessage());
 	    return "Unknown!";
 	});
@@ -23,22 +23,23 @@
 # 2 - With Chaining 
 
   **Case 1 : Exception caught in supplyAsync : Entering Callback**
+
+	 CompletableFuture < String > future = CompletableFuture.supplyAsync(() - > {
+	     System.out.println("supplyAsync executing");
+	     int number = 9 / 0;
+	     return "result from supplyAsync";
+	 }).exceptionally(ex - > {
+	     System.out.println("Oops! We have an exception in supplyAsync - " + ex.getMessage());
+	     return "result from caught Exception";
+	 }).thenApply(result - > {
+	     System.out.println(" thenApply Callback : executing");
+	     System.out.println(" Result received From SupplyAsync in thenApply Callback: " + result);
+
+	     return " result from thenApply";
+	 });
+
+	 System.out.println(future.get());
     
-     CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
-          System.out.println("supplyAsync executing");
-          int number = 9/0;
-          return "result from supplyAsync";
-        }).exceptionally(ex -> {
-            System.out.println("Oops! We have an exception in supplyAsync - " + ex.getMessage());
-            return "result from caught Exception";
-        }).thenApply(result -> {
-            System.out.println(" thenApply Callback : executing");
-          System.out.println(" Result received From SupplyAsync in thenApply Callback: " + result);
-
-          return " result from thenApply";
-        });
-
-        System.out.println(future.get());
                
         Output : 
         supplyAsync executing
@@ -50,21 +51,20 @@
 
   **Case 2 : Exception caught in supplyAsync : Not Entering Callback**
 
-     CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
-            System.out.println("supplyAsync executing");
-            int number = 9/0;
-            return "result from supplyAsync";
-          }).thenApply(result -> {
-              System.out.println(" thenApply Callback : executing");
-            return " result from thenApply";
-          }).exceptionally(ex -> {
-              System.out.println("Oops! We have an exception in supplyAsync - " + ex.getMessage());
-              return "result from caught Exception";
-          });
+	   CompletableFuture < String > future = CompletableFuture.supplyAsync(() - > {
+	       System.out.println("supplyAsync executing");
+	       int number = 9 / 0;
+	       return "result from supplyAsync";
+	   }).thenApply(result - > {
+	       System.out.println(" thenApply Callback : executing");
+	       return " result from thenApply";
+	   }).exceptionally(ex - > {
+	       System.out.println("Oops! We have an exception in supplyAsync - " + ex.getMessage());
+	       return "result from caught Exception";
+	   });
 
 
-          System.out.println(future.get());
-
+       System.out.println(future.get());
 
 
     supplyAsync executing

@@ -1,4 +1,4 @@
-# 1 - Need to Attach a Callback to a completableFuture
+## 1 - Need to Attach a Callback to a completableFuture
 
       Suppose we have a CompletableFuture and we need to process the result after it gets completed.
       We can do this after CompletableFuture.get(). But get() method is blocking.
@@ -15,7 +15,7 @@
 
 
 
-# 2 - Ways to Attach a Callback to a completableFuture :
+## 2 - Ways to Attach a Callback to a completableFuture :
 
 
 **2 - I) Processing|Transforming Result of a Completable Future**

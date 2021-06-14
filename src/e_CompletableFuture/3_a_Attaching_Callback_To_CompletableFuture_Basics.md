@@ -44,12 +44,11 @@
 	
        2)thenCombine(CompletableFuture, BiFunction-Functional-Interface) :  Used to Chain 2 DEPENDENT CompletableFutures
       
-   
-   
+   #  
    
  NOTE : 
-        "Async variants" is available for all the above discussed Callbacks 
-        If 'Async' is applied, Then callback-method will run in seperate thread than completableFuture
+           "Async variants" is available for all the above discussed Callbacks 
+            If 'Async' is applied, Then callback-method will run in seperate thread than completableFuture
      
      
      

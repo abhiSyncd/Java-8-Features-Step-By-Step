@@ -39,10 +39,8 @@
           return " result from thenApply";
         });
 
-
         System.out.println(future.get());
-        
- #       
+               
         Output : 
         supplyAsync executing
         Oops! We have an exception in supplyAsync - java.lang.ArithmeticException: / by zero

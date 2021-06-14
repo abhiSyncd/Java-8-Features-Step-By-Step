@@ -1,28 +1,29 @@
 
+	   Summary 
+	   (a) Running multiple futures in parallel and do something after all of them are complete..
+               - allOf()
+	       - join() : prefferred
+	   (b) Running multiple futures in parallel but The first completedFuture which completes will be returned.
+               - anyOf()
+
+## Example - 1 - join()  
+               	      
+	      CompletableFuture < Integer > future1 = CompletableFuture.supplyAsync(() - > {
+		     Thread.sleep(3000L);
+		     return 50;
+	      });
+	      CompletableFuture < Integer > future2 = CompletableFuture.supplyAsync(() - > 40);
+	      CompletableFuture < Integer > future3 = CompletableFuture.supplyAsync(() - > 30);
+
+	      List < Integer > list = Stream.of(future1, future2, future3)
+		     .map(future - > future.join()) // .map(CompletableFuture::join)
+		     .collect(Collectors.toList());
 
 
-
-## Example - 1 - allOf() + join()  
-
-If we need to run multiple futures in parallel and combine their result
-              	      
-	      CompletableFuture<Integer> future1 = CompletableFuture.supplyAsync(() -> 50);
-	      CompletableFuture<Integer> future2 = CompletableFuture.supplyAsync(() -> 40);
-	      CompletableFuture<Integer> future3 = CompletableFuture.supplyAsync(() -> 30);
-
-	      List<Integer> list = Stream.of(future1, future2, future3)
-	                .map(future -> future.join())  // .map(CompletableFuture::join)
-	                .collect(Collectors.toList());
-	      
-	      
-	      System.out.println(list);  // [50, 40, 30]
-
-      
-
+	      System.out.println(list); // [50, 40, 30]
+	
 
 ## Example 2 : anyOf() :  
-
-If we need to run multiple futures in parallel but The first completedFuture which completes will be returned.
 
 		CompletableFuture<Integer> future1 = CompletableFuture.supplyAsync(() -> {
 			try {

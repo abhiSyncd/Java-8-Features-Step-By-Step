@@ -3,17 +3,16 @@
 	https://www.youtube.com/watch?v=-nDVy45eOYQ
 
 
-# 1 - Without Chaining 
+# 1 - Without Chaining
 
-
-    CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
-			int number = 9/0;
-			return "Some result";
-		}).exceptionally(ex -> {
-		    System.out.println("Oops! We have an exception - " + ex.getMessage());
-		    return "Unknown!";
-		});	
-    System.out.println(future.get());
+	CompletableFuture < String > future = CompletableFuture.supplyAsync(() - > {
+	    int number = 9 / 0;
+	    return "Some result";
+	}).exceptionally(ex - > {
+	    System.out.println("Oops! We have an exception - " + ex.getMessage());
+	    return "Unknown!";
+	});
+	System.out.println(future.get());
 	
     Output : 
     Oops! We have an exception - java.lang.ArithmeticException: / by zero

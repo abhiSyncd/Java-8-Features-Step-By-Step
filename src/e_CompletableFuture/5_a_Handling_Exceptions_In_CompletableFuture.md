@@ -1,4 +1,8 @@
-
+     Summary : 3 WAYS
+     https://mincong.io/2020/05/30/exception-handling-in-completable-future/
+     
+     
+     
 # 1 - Exception When CF is not Chained with Callback
 
 	CompletableFuture <String> future = CompletableFuture.supplyAsync(()->{

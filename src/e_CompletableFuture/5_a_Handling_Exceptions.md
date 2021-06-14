@@ -5,25 +5,24 @@
 
 # 1 - Exception When CF is not Chained with Callback
 
-	CompletableFuture <String> future = CompletableFuture.supplyAsync(() - > {
-	    int number = 9/0;
+	CompletableFuture < String > future = CompletableFuture.supplyAsync(() - > {
+	    int number = 9 / 0;
 	    return "Some result";
-	}).exceptionally(ex -> {
+	}).exceptionally(ex - > {
 	    System.out.println("Oops! We have an exception - " + ex.getMessage());
 	    return "Unknown!";
 	});
 	System.out.println(future.get());
-	
-       OUTPUT :
-       Oops! We have an exception - java.lang.ArithmeticException: / by zero
-       Unknown!
 
+	OUTPUT:
+	Oops!We have an exception - java.lang.ArithmeticException: / by zero
+	Unknown!
   
   
 # 2 -  Exception When CF is Chained with Callback 
 
   **Case 1 : Exception caught in supplyAsync : Executing Callback**
-
+  
 	 CompletableFuture < String > future = CompletableFuture.supplyAsync(() - > {
 	     System.out.println("supplyAsync executing");
 	     int number = 9 / 0;
@@ -39,37 +38,35 @@
 	 });
 
 	 System.out.println(future.get());
-    
-               
-        Output : 
-        supplyAsync executing
-        Oops! We have an exception in supplyAsync - java.lang.ArithmeticException: / by zero
-          thenApply Callback : executing
-          Result received From SupplyAsync in thenApply Callback : result from caught Exception
-          result from thenApply
 
+
+	 OUTPUT:
+	 supplyAsync executing
+	 Oops!We have an exception in supplyAsync - java.lang.ArithmeticException: / by zero
+	  thenApply Callback: executing
+	  Result received From SupplyAsync in thenApply Callback: result from caught Exception
+	  result from thenApply
 
   **Case 2 : Exception caught in supplyAsync : Not Executing Callback**
-
-	   CompletableFuture < String > future = CompletableFuture.supplyAsync(() - > {
-	       System.out.println("supplyAsync executing");
-	       int number = 9 / 0;
-	       return "result from supplyAsync";
-	   }).thenApply(result - > {
-	       System.out.println(" thenApply Callback : executing");
-	       return " result from thenApply";
-	   }).exceptionally(ex - > {
-	       System.out.println("Oops! We have an exception in supplyAsync - " + ex.getMessage());
-	       return "result from caught Exception";
-	   });
-
-
-       System.out.println(future.get());
+  
+	CompletableFuture < String > future = CompletableFuture.supplyAsync(() - > {
+	    System.out.println("supplyAsync executing");
+	    int number = 9 / 0;
+	    return "result from supplyAsync";
+	}).thenApply(result - > {
+	    System.out.println(" thenApply Callback : executing");
+	    return " result from thenApply";
+	}).exceptionally(ex - > {
+	    System.out.println("Oops! We have an exception in supplyAsync - " + ex.getMessage());
+	    return "result from caught Exception";
+	});
 
 
-    supplyAsync executing
-    Oops! We have an exception in supplyAsync - java.lang.ArithmeticException: / by zero
-    result from caught Exception
+	System.out.println(future.get());
 
+	OUTPUT : 
+	supplyAsync executing
+	Oops!We have an exception in supplyAsync - java.lang.ArithmeticException: / by zero
+	result from caught Exception
 
       

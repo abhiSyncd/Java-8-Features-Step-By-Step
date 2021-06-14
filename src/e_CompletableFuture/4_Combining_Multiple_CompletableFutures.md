@@ -5,7 +5,8 @@
 		> allOf()
 		> join(): prefferred
 
-	    (b) Running multiple futures in parallel but The first completedFuture which completes will be returned         > anyOf()
+	    (b) Running multiple futures in parallel but The first completedFuture which completes will be returned
+	        > anyOf()
 
 	  
 ## Example - 1 - join()  

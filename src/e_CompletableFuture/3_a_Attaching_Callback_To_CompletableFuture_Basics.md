@@ -40,9 +40,11 @@
      
        The 2 methods used to combine results of 2 CompletableFutures
 
-       1)thenCompose() : Used to Chain 2 INDEPENDENT CompletableFutures
+       1)thenCompose() | thenComposeAsync
+          : Used to Chain 2 INDEPENDENT CompletableFutures
 	
-       2)thenCombine(CompletableFuture, BiFunction-Functional-Interface) :  Used to Chain 2 DEPENDENT CompletableFutures
+       2)thenCombine(CompletableFuture, BiFunction-Functional-Interface) :  
+         : Used to Chain 2 DEPENDENT CompletableFutures
       
 #  
    

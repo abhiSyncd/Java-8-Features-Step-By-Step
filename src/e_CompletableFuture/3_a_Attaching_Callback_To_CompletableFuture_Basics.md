@@ -18,7 +18,7 @@
 # 2 - Ways to Attach a Callback to a completableFuture :
 
 
- ## 2 - I) Processing|Transforming Result of a Completable Future
+**2 - I) Processing|Transforming Result of a Completable Future**
  
        1)thenRun(Runnable Interface , Executor-optional)   | thenRunAsync(Runnable Interface , Executor-optional)      
 	      : Runnable Interface has a method run() 
@@ -36,7 +36,7 @@
 		
 	
      
-## 2 - II) Chaining 2 Completable Future**
+**2 - II) Chaining 2 Completable Future**
      
        The 2 methods used to combine results of 2 CompletableFutures
 

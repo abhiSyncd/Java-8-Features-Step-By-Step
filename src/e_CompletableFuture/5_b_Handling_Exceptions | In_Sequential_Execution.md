@@ -5,7 +5,7 @@
 
 	(a) Using exceptionally
 	    - At end of the the Pipeline
-            - At Middle of the Pipeline
+	    - At Middle of the Pipeline
 	(b) Using handle
 	    - At end of the the Pipeline 
 	    - At Middle of the Pipeline

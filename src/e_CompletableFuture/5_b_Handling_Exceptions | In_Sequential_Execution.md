@@ -5,15 +5,15 @@
 
 	(a) Using exceptionally
 	    - At end of the the Pipeline
-		- At Middle of the Pipeline
+            - At Middle of the Pipeline
 	(b) Using handle
-		- At end of the the Pipeline 
-		- At Middle of the Pipeline
+	    - At end of the the Pipeline 
+	    - At Middle of the Pipeline
 
 	Note : In Both Cases : 
-		   If Exception caught in Any Block > Pipeline Breaks  
-		   > The exceptionally Block Executes and returns               > The Next Block in The pipeline continue executing
-		   > The handle() method's ELSE statement Executes  and returns > The Next Block in The pipeline continue executing
+	       If Exception caught in Any Block > Pipeline Breaks  
+	       > The exceptionally Block Executes and returns               > The Next Block in The pipeline continue executing
+	       > The handle() method's ELSE statement Executes  and returns > The Next Block in The pipeline continue executing
 	 
 	 
 # 1 -  Using exceptionally

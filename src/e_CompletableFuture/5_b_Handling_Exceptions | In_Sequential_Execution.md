@@ -1,7 +1,7 @@
 
 # 1 -  Using exceptionally
 
-## Case 1 : Exception caught in supplyAsync : Executing Callback
+## Case 1 : Exception caught in supplyAsync : BUT Executing Callback
   
 	 CompletableFuture <String> future = CompletableFuture.supplyAsync(()->{
 	     System.out.println("supplyAsync executing");
@@ -30,7 +30,7 @@
 	 Final Response :  result from thenApply
 
 
-  ## Case 2 : Exception caught in supplyAsync : Not Executing Callback
+  ## Case 2 : Exception caught in supplyAsync : BUT :  Not Executing Callback
   
   **Example 1 :** 
   

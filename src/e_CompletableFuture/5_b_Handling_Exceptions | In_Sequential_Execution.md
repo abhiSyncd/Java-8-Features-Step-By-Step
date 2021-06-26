@@ -32,7 +32,7 @@
 	})
 	.exceptionally(ex-> {
 	    System.out.println("Oops! We have an exception in supplyAsync - " + ex.getMessage());
-	    return "Unknown!";
+	    return "IN VALID!";
 	});
 
 
@@ -41,7 +41,7 @@
 	OUTPUT : 
 	supplyAsync executing
 	Oops!We have an exception in supplyAsync - java.lang.ArithmeticException: / by zero
-	Final Response : Unknown!
+	Final Response :IN VALID!
 	
 ## Case 2 : At Middle of the Pipeline
 
@@ -63,78 +63,61 @@
          return "IN VALID!";
      })
      .thenAccept(result - > {
-         System.out.println("DONE");                             // Note : We are using ThenAccept() at the end : So future.get not-required
+         System.out.println("Final Response : " +  result);         // Note : We are using ThenAccept() at the end : So future.get not-required
      });
      
      
      OUTPUT : 
      supplyAsync executing
      Oops!We have an exception - java.lang.ArithmeticException: / by zero
-     DONE
+     Final Response : IN VALID!
 	
       
 
 # 2 - Using handle 
 
   ## Case 1 : At end of the the Pipeline
+  
+    CompletableFuture < String > future = CompletableFuture.supplyAsync(() -> {
+        System.out.println("supplyAsync executing");
+        int number = 9 / 0;
+        return "result from suuplyAsync";
+    })
+    .thenApply(result -> {
+        System.out.println("thenApply 1 start");
+        System.out.println("Do something with the result got from : supplyAsync");
+        System.out.println("thenApply 1 stop");
+        return "result from thenApply 1";
+    })
+    .thenApply(result -> {
+        System.out.println("thenApply 2 : start");
+        System.out.println("Do something with the result got from : thenApply 1");
+        System.out.println("thenApply 2 : start");
+        return "result from thenApply 2";
+    })
+    .handle((result, ex) -> {
+        if (result != null) {
+            System.out.println(result);                      // On No-Exception in Pipeline : Return Final Response
+            return result;
+        } else {
+            return "Exception Caught: " + ex.getMessage();   // On Exception in Pipeline    : Return Exception   
+        }
+    });
+    
+    
+    System.out.println("Final Response : " + future.get());  
+    
+    
+    Output : 
+    supplyAsync executing
+    Exception Caught
+    Final Response : Error handling: java.lang.ArithmeticException: / by zero
 
-	CompletableFuture.supplyAsync(() -> {
-		System.out.println("supplyAsync executing");
-		return "result from suuplyAsync";
-	    })
-	    .thenApply(result -> {
-		System.out.println("thenApply 1 start");
-		System.out.println("Do something with the result got from : supplyAsync);
-		System.out.println("thenApply 1 stop");
-		return "result from thenApply 1";
-	    })
-	    .thenApply(result -> {
-		System.out.println("thenApply 2 : start");
-		System.out.println("Do something with the result got from : thenApply 1);
-		System.out.println("thenApply 2 : start");
-		return "result from thenApply 2";
-	    })
-	    .handle((result, ex) -> {
-		if (result != null) {
-		    System.out.println(result);
-		    return result;
-		} else {
-		    System.out.println("Exception Caught");
-		    return "Error handling: " + ex.getMessage();
-		}
-	    });
-	    
-	  NOTE :   
-          If Exception caught in Any Block > Pipeline Breaks  > The handle() method's ELSE statement will be called
 	  
 
 ## Case 2 : At Middle of the Pipeline
 
-	CompletableFuture.supplyAsync(() -> {
-		System.out.println("supplyAsync executing");
-		int number = 9 / 0;
-		return "result from suuplyAsync";
-	    })
-	    .thenApply(result -> {
-		System.out.println("thenApply 1 start");
-		System.out.println("thenApply 1 : result from supplyAsync : " + result);
-		System.out.println("thenApply 1 stop");
-		return "result from thenApply 1";
-	    })
-	    .handle((result, ex) -> {
-		if (result != null) {
-		    System.out.println(result);
-		    return result;
-		} else {
-		    System.out.println("Exception Caught");
-		    return "Error handling";
-		}
-	    }).thenApply(result -> {
-		System.out.println("thenApply 2 : start");
-		System.out.println("thenApply 2 : result from thenApply1 : " + result);
-		System.out.println("thenApply 2 stop");
-		return "result from thenApply 2";
-	    });
+
     
 	
 	 OUTPUT : 

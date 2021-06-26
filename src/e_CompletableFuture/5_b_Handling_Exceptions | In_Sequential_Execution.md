@@ -44,7 +44,7 @@
 	Final Response : Unknown!
 	
 ## Case 2 : At Middle of the Pipeline
- 
+
         CompletableFuture.supplyAsync(()-> {
 	    System.out.println("supplyAsync executing");
 	    int number = 9 / 0;

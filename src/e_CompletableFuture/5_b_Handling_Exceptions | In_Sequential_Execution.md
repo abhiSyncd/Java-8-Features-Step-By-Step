@@ -20,17 +20,17 @@
 
   ## Case 1 : At end of the the Pipeline
   
-	CompletableFuture <String> future = CompletableFuture.supplyAsync(()-> {
+	CompletableFuture <String> future = CompletableFuture.supplyAsync(() -> {
 	    System.out.println("supplyAsync executing");
 	    int number = 9 / 0;
 	    return "result from supplyAsync";
 	})
-	.thenApply(result->{
+	.thenApply(result -> {
 	    System.out.println(" thenApply Callback : executing");
 	    System.out.println("thenApply Callback : result from supplyAsync -> " + result);
 	    return " result from thenApply";
 	})
-	.exceptionally(ex-> {
+	.exceptionally(ex -> {
 	    System.out.println("Oops! We have an exception in supplyAsync - " + ex.getMessage());
 	    return "IN VALID!";
 	});
@@ -45,24 +45,24 @@
 	
 ## Case 2 : At Middle of the Pipeline
 
-     CompletableFuture.supplyAsync(() - > {
+     CompletableFuture.supplyAsync(() -> {
          System.out.println("supplyAsync executing");
          int number = 9 / 0;
          return "result from suuplyAsync";
      })
-     .thenApply(result - > {
+     .thenApply(result -> {
          System.out.println("thenApply 1 executing");
          return "result from thenApply 1";
      })
-     .thenApply(result - > {
+     .thenApply(result -> {
          System.out.println("thenApply 2 executing");
          return "result from thenApply 2";
      })
-     .exceptionally(ex - > {
+     .exceptionally(ex -> {
          System.out.println("Oops! We have an exception - " + ex.getMessage());
          return "IN VALID!";
      })
-     .thenAccept(result - > {
+     .thenAccept(result -> {
          System.out.println("Final Response : " +  result);         // Note : We are using ThenAccept() at the end : So future.get not-required
      });
      

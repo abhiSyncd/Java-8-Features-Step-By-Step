@@ -108,7 +108,7 @@
     System.out.println("Final Response : " + future.get());  
     
     
-    Output : 
+    OUTPUT : 
     supplyAsync executing
     Exception Caught
     Final Response : Error handling: java.lang.ArithmeticException: / by zero
@@ -117,16 +117,34 @@
 
 ## Case 2 : At Middle of the Pipeline
 
-
+    CompletableFuture.supplyAsync(() -> {
+        System.out.println("supplyAsync executing");
+        int number = 9 / 0;
+        return "result from suuplyAsync";
+    })
+    .thenApply(result -> {
+        System.out.println("thenApply 1 start");
+        System.out.println("thenApply 1 : result from supplyAsync : " + result);
+        System.out.println("thenApply 1 stop");
+        return "result from thenApply 1";
+    })
+    .handle((result, ex) -> {
+        if (result != null) {
+            System.out.println(result);
+            return result;
+        } else {
+            System.out.println("Oops! We have an exception - " + ex.getMessage());
+            return "IN VALID!";
+        }
+    }).thenAccept(result -> {
+        System.out.println("Final Response : " + result); // Note : We are using ThenAccept() at the end : So future.get not-required
+    });
     
-	
-	 OUTPUT : 
-	 supplyAsync executing
-	 Exception Caught
-	 thenApply 2 : start
-	 thenApply 2 : result from thenApply1 : Error handling
-	 thenApply 2 stop
-
+    
+    OUTPUT : 
+    supplyAsync executing
+    Oops! We have an exception - java.lang.ArithmeticException: / by zero
+    Final Response : IN VALID!
 
 
 # 

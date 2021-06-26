@@ -45,31 +45,32 @@
 	
 ## Case 2 : At Middle of the Pipeline
 
-	 CompletableFuture.supplyAsync(() - > {
-		 System.out.println("supplyAsync executing");
-		 int number = 9 / 0;
-		 return "result from suuplyAsync";
-	     })
-	     .thenApply(result - > {
-		 System.out.println("thenApply 1 executing");
-		 return "result from thenApply 1";
-	     })
-	     .thenApply(result - > {
-		 System.out.println("thenApply 2 executing");
-		 return "result from thenApply 2";
-	     })
-	     .exceptionally(ex - > {
-		 System.out.println("Oops! We have an exception - " + ex.getMessage());
-		 return "IN VALID!";
-	     })
-	     .thenAccept(result - > {
-		 System.out.println("DONE");
-	     });
+     CompletableFuture.supplyAsync(() - > {
+         System.out.println("supplyAsync executing");
+         int number = 9 / 0;
+         return "result from suuplyAsync";
+     })
+     .thenApply(result - > {
+         System.out.println("thenApply 1 executing");
+         return "result from thenApply 1";
+     })
+     .thenApply(result - > {
+         System.out.println("thenApply 2 executing");
+         return "result from thenApply 2";
+     })
+     .exceptionally(ex - > {
+         System.out.println("Oops! We have an exception - " + ex.getMessage());
+         return "IN VALID!";
+     })
+     .thenAccept(result - > {
+         System.out.println("DONE");                             // Note : We are using ThenAccept() at the end : So future.get not-required
+     });
      
-        OUTPUT : 
-	supplyAsync executing
-	Oops!We have an exception - java.lang.ArithmeticException: / by zero
-	DONE
+     
+     OUTPUT : 
+     supplyAsync executing
+     Oops!We have an exception - java.lang.ArithmeticException: / by zero
+     DONE
 	
       
 

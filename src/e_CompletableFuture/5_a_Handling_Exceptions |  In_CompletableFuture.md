@@ -9,13 +9,13 @@
 	    int number = 9 / 0;
 	    return "result from supplyAsync";
 	}).exceptionally(ex->{
-	    return "If Exception Caught |" + ex.getMessage() + "  | Return Error OR Some Mocked Value"; 
+	    return "Exception Caught |" + ex.getMessage() + "  | Return Error OR Some Mocked Value"; 
 	});
 	System.out.println("Final Response : " + future.get());
 
 
     OUTPUT :
-    Final Response -> If Exception Caught |java.lang.ArithmeticException: / by zero  | Return Error OR Some Mocked Value
+    Final Response -> Exception Caught |java.lang.ArithmeticException: / by zero  | Return Error OR Some Mocked Value
  
 
 
@@ -29,7 +29,7 @@
         if (result != null) {
             return result;
         } else {
-            return "If Exception Caught |" + ex.getMessage() + "  | Return Error OR Some Mocked Value"; 
+            return "Exception Caught |" + ex.getMessage() + "  | Return Error OR Some Mocked Value"; 
         }
     });
 
@@ -38,4 +38,4 @@
     
     
     OUTPUT :
-    Final Response -> If Exception Caught |java.lang.ArithmeticException: / by zero  | Return Error OR Some Mocked Value
+    Final Response -> Exception Caught |java.lang.ArithmeticException: / by zero  | Return Error OR Some Mocked Value

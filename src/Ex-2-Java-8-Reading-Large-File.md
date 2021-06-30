@@ -1,7 +1,3 @@
-          File Handling in Java : https://funnelgarden.com/java_read_file/
-
-          Source : https://stackabuse.com/reading-a-file-line-by-line-in-java/
-
 ## PROBLEM  : 
 
     You have to parse a large CSV file (~90MB), practically read the file, and 
@@ -51,3 +47,9 @@
            From the testing I've done, it seems that reading a 90 MB CSV file using the way described above 
            will take around 700 ms when running from inside Eclipse. 
 
+#
+         
+         Source and References 
+         https://stackabuse.com/reading-a-file-line-by-line-in-java/
+         https://funnelgarden.com/java_read_file/
+          

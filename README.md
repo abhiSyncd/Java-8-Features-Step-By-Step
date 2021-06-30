@@ -233,6 +233,11 @@
 ##	  
 # 8 - [Optional : java.util package](https://github.com/abhiSyncd/Java-8-Features-Step-By-Step/blob/master/src/1_Optional.md)
 
+# 9  - Java Memory Model 
+
+       PermGen method area replaced with MetaSpace.
+       Source : http://karunsubramanian.com/websphere/one-important-change-in-memory-management-in-java-8/
+       
 # 
     Other Sources : 
     https://www.javachinna.com/java-8-stream-functions-with-examples/

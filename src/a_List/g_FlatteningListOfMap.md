@@ -1,7 +1,7 @@
 # Employee.java
 
     public class Employee { 
-      private Int
+      private int id
       private String name;
       private int salary;
       

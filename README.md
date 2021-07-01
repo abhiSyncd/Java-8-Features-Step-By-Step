@@ -24,6 +24,12 @@
        - After Java 8 
        
     6) CompletableFuture in java.util.concurrent package
+       - Asynchrnous Programming 
+       - Limitation of Future 
+       - Creating CF 
+       - Sequential Execution of CF : CF Pipeline
+       - Parallel Execution of Multiple CF
+       - Handling Exceptions in CF
     
     7) Collection Improvements
        - Map Interface added methods

@@ -29,8 +29,12 @@
        - Map Interface added methods
        - Comparator Interface added methods
     
-    8) Optional 
-    
+    8) Optional
+       - What 
+       - Ways to Create Optional
+       - Methods Optional class
+       - Use Case
+       
     9) Java Memory Model 
     
     

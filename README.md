@@ -1,7 +1,7 @@
 ##
 # 1 - @Functional Interfaces | java.util.function package
 
-  ## (1-a) What is a Functional Interfaces
+  ## (a) What is a Functional Interfaces
 
     A special kind of interfaces that contains ONLY-ONE-ABSTRACT-Method
     Note : it may contain many DEFAULT and STATIC methods
@@ -11,7 +11,7 @@
 
 
 
-  ## (1-b) Use of Functional Interfaces
+  ## (b) Use of Functional Interfaces
  
     Used to implement functional programming in Java
     In functional programming, functions can exist outside the scope of an object.
@@ -25,7 +25,7 @@
         Creating Threads Using "Anonymous Inner Class" | Functional-Interface+Lammbda
    
    
-  ## (1-c) Java 8 In Built @Functional Interfaces
+  ## (c) Java 8 In Built @Functional Interfaces
           
     -> Consumer   : Has a method 'accept()' : that accepts one argument and returns no result  
     -> Function   : Has a method 'apply()'  : that accepts one argument and returns an object.  
@@ -45,7 +45,7 @@
 # 2 - Stream Interface :: java.util.stream package
 
 
-   ## (2-a) What is Stream Interface
+   ## (a) What is Stream Interface
      
     Provide common operations from functional programing languages on collections,arrays or I/O resources,
     such as :
@@ -57,7 +57,7 @@
     -> collect(Supplier Interface)       : Convert Stream to collection
    
    
-   ## (2-b) Types of operations in a stream :: Stream return Type
+   ## (b) Types of operations in a stream :: Stream return Type
   
     i) Intermediate operations 
        : return Stream and 
@@ -89,7 +89,7 @@
 		findAny
 	
 
-  ## (2-c)  Streams vs Collection
+  ## (c)  Streams vs Collection
          
     - Streams do not store data
       Collection is a data structure used to store, retrieve, manipulate and write back the data.
@@ -104,12 +104,12 @@
       Collections have a finite size, streams need not.
  
  
-  ## (2-d) Advantage of Streams over loops 
+  ## (d) Advantage of Streams over loops 
  
     - Streams are a more declarative style provides better Readability.
 
   
-  ## (2-e) Streams : Thread Safety and Immutability 
+  ## (e) Streams : Thread Safety and Immutability 
  
 	@) Streams and Thread Safety  : Streams are not Thread Safe  
 	   We can actually pass a custom ThreadPool when processing the stream: 
@@ -133,7 +133,7 @@
 	   https://dzone.com/articles/java-10-immutableunmodifiable-stream-api-collector
 	  
 
-## (2-f) Parallel Streams
+## (f) Parallel Streams
   
   
 ##

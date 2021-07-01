@@ -7,7 +7,7 @@
       
     2) Stream Interface
        - What 
-       - Types : Intermediate | Temrinal
+       - Types : Intermediate | Terminal
        - Streams vs Collection
        - Advantage Streams over loops 
        -  Streams : Thread Safety and Immutability 

@@ -4,7 +4,7 @@
        - What 
        - Use
        - InBuilt 
-      
+ #      
     2) Stream Interface
        - What 
        - Types : Intermediate | Terminal
@@ -12,7 +12,7 @@
        - Advantage Streams over loops 
        -  Streams : Thread Safety and Immutability 
        - Parallel Streams
-      
+#      
     3) Lambda Expressio
     
     4) Interfaces

@@ -224,11 +224,12 @@
 ##	
 # 5 - Dates in java.time package
 
-     - Before Java 8 : Date date = new Date() :  Wed Apr 10 11:43:38 IST 2019 
-	               Problem :
-		       - Date Class is in  Packages java.util and java .sql, So Creates Confusion
-		       - Gives Both Date+Time
-		       - Is a Mutable class hence it is Not Thread Safe
+     - Before Java 8 : 
+       Date date = new Date() :  Wed Apr 10 11:43:38 IST 2019
+       Problem :
+       - Date Class is in  Packages java.util and java .sql, So Creates Confusion
+       - Gives Both Date+Time
+       - Is a Mutable class hence it is Not Thread Safe
 			  
      - Java 8 and after : 
        -> LocalDate localdate = LocalDate.now();             :  2019-04-10              : Gives only Date

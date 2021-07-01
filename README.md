@@ -1,4 +1,4 @@
-# Summary : What is covered in this tutorial
+# Summary : What is covered in this Tutorial
 
     1) @Functional Interfaces
        - What 

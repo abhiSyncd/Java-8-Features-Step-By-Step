@@ -10,7 +10,7 @@
        - Types : Intermediate | Terminal
        - Streams vs Collection
        - Advantage Streams over loops 
-       -  Streams : Thread Safety and Immutability 
+       - Streams : Thread Safety and Immutability 
        - Parallel Streams
       
     3) Lambda Expressio

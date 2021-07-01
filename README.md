@@ -1,4 +1,40 @@
-##
+# Summary 
+
+    1) @Functional Interfaces
+       - What 
+       - Use
+       - InBuilt 
+      
+    2) Stream Interface
+       - What 
+       - Types : Intermediate | Temrinal
+       - Streams vs Collection
+       - Advantage Streams over loops 
+       -  Streams : Thread Safety and Immutability 
+       - Parallel Streams
+      
+    3) Lambda Expressio
+    
+    4) Interfaces
+       - Interface Before Java 8  
+       - Interface After Java 8  
+    
+    5) Dates in java.time package
+       - Before Java 8
+       - After Java 8 
+       
+    6) CompletableFuture in java.util.concurrent package
+    
+    7) Collection Improvements
+       - Map Interface added methods
+       - Comparator Interface added methods
+    
+    8) Optional 
+    
+    9) Java Memory Model 
+    
+    
+      
 # 1 - @Functional Interfaces | java.util.function package
 
   ## (a) What is a Functional Interfaces

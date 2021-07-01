@@ -14,15 +14,15 @@
        - Parallel Streams
 #      
     3) Lambda Expressio
-    
+#    
     4) Interfaces
        - Interface Before Java 8  
        - Interface After Java 8  
-    
+#   
     5) Dates in java.time package
        - Before Java 8
        - After Java 8 
-       
+#       
     6) CompletableFuture in java.util.concurrent package
        - Asynchrnous Programming 
        - Limitation of Future 
@@ -30,17 +30,17 @@
        - Sequential Execution of CF : CF Pipeline
        - Parallel Execution of Multiple CF
        - Handling Exceptions in CF
-    
+ #   
     7) Collection Improvements
        - Map Interface added methods
        - Comparator Interface added methods
-    
+#    
     8) Optional
        - What 
        - Ways to Create Optional
        - Methods Optional class
        - Use Case
-       
+ #      
     9) Java Memory Model 
     
     

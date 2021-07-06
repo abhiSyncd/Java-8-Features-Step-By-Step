@@ -13,7 +13,7 @@
        - Streams : Thread Safety and Immutability 
        - Parallel Streams
       
-    3) Lambda Expressio
+    3) Lambda Expression
     
     4) Interfaces
        - Interface Before Java 8  

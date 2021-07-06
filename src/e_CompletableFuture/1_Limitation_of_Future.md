@@ -120,8 +120,8 @@
 
 # 
 
-   Others : 
-   Asyn programming when : https://www.google.com/amp/s/stackify.com/when-to-use-asynchronous-programming/amp/
-   https://thepracticaldeveloper.com/2018/02/24/differences-between-completablefuture-future-and-streams/
+    Others : 
+    Asyn programming when : https://www.google.com/amp/s/stackify.com/when-to-use-asynchronous-programming/amp/
+    https://thepracticaldeveloper.com/2018/02/24/differences-between-completablefuture-future-and-streams/
 
 

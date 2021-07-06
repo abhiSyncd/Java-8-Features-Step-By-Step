@@ -41,7 +41,7 @@
        - Methods Optional class
        - Use Case
        
-    9) Java Memory Model 
+    9) Java Memory Model Changes 
     
     
       

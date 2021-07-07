@@ -11,7 +11,7 @@
 	    - At Middle of the Pipeline
 
 	Note : In Both Cases : 
-	       If Exception caught in Any Block > Pipeline Breaks  
+	       If Exception caught in Any Block ({}) > Pipeline Breaks  
 	       > The exceptionally Block Executes and returns               > The Next Block in The pipeline continue executing
 	       > The handle() method's ELSE statement Executes  and returns > The Next Block in The pipeline continue executing
 	 

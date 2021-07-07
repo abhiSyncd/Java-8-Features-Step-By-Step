@@ -1,5 +1,5 @@
 
-# Synchronous 
+# 1 - Synchronous 
 
     If an API call is synchronous, 
     It means that code execution will block (or wait) for the API call to return before continuing. 
@@ -7,7 +7,7 @@
     which could be perceived by the user as latency or performance lag in your app.
  
  
-# A-Synchronous
+# 2 - A-Synchronous
 
     Asynchronous calls do not block (or wait) for the API call to return from the server. 
     Execution continues on in your program, and when the call returns from the server, a “callback” function is executed.

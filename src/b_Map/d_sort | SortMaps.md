@@ -68,16 +68,16 @@
     Ascending Order
     -----------------
     
-	Map sortedMap = unsortedMap.entrySet().stream()
-	    .sorted((e1, e2) -> e1.getValue().compareTo(e2.getValue())) // .sorted(Map.Entry.comparingByValue())
-	    .collect(Collectors.toMap(
-		Map.Entry::getKey,
-		Map.Entry::getValue,
-		(e1, e2) -> e1,
-		LinkedHashMap::new));
+        Map sortedMap = unsortedMap.entrySet().stream()
+            .sorted((e1, e2) -> e1.getValue().compareTo(e2.getValue())) // .sorted(Map.Entry.comparingByValue())
+            .collect(Collectors.toMap(
+                Map.Entry::getKey,
+                Map.Entry::getValue,
+                (e1, e2) -> e1,
+                LinkedHashMap::new));
 
-	sortedMap.forEach((key, value) -> System.out.println(key + ":" + value));
-
+        sortedMap.forEach((key, value) -> System.out.println(key + ":" + value));
+    
     -----------------
     Descending Order
     -----------------

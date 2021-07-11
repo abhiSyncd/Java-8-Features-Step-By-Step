@@ -1,5 +1,5 @@
         
-	Applying Single Filter : Find Even Values in Map
+	Example : Find Even Values in Map
 	
 # 1 - Before Java 8
 

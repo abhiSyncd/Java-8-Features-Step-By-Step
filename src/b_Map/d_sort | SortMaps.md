@@ -1,8 +1,8 @@
-    Map<String,Integer> unsortedMap = new HashMap<>();
-		unsortedMap.put("employee2", 2);
+    Map < String, Integer > unsortedMap = new HashMap < > ();
+    unsortedMap.put("employee2", 2);
     unsortedMap.put("employee4", 4);
     unsortedMap.put("employee3", 3);
-		unsortedMap.put("employee1", 1);
+    unsortedMap.put("employee1", 1);
     
     
 # 1 - Sort By Key 

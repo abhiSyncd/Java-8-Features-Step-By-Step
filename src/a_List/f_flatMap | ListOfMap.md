@@ -10,7 +10,7 @@
 
 
 
-# MyMain.java
+# Creating Mock Data
 
     public class MyMain {
         public static void main(String[] args) {

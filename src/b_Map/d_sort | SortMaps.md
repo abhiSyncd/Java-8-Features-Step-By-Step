@@ -9,17 +9,22 @@
 
 **(a) Using TreeMap**
 
+    --------------------
     Ex) Ascending Order
+    --------------------
         Map<String,Integer> sortedMap = new TreeMap<>(unsortedMap);  		
         sortedMap.entrySet().forEach(System.out::println);
 
-
+    --------------------
     Ex) Descending Order
-        Map < String, Integer > sortedMap2 = new TreeMap < > ((key1, key2) - > {
+    --------------------
+        Map<String,Integer> sortedMap2 = new TreeMap<>((key1, key2) -> {
             return key2.compareTo(key1);
         });
+        
         sortedMap2.putAll(unsortedMap);
-
+        
+        sortedMap.entrySet().forEach(System.out::println);
 
 **(b) Using Custom Comparator**
 

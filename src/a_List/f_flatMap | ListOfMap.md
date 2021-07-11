@@ -1,7 +1,7 @@
 
 # Creating Mock Data
 
-## Employee.java
+**Employee**
 
     public class Employee { 
       private int id
@@ -12,9 +12,7 @@
     }
 
 
-
-
-## MyMain.java
+**MyMain**
 
     public class MyMain {
         public static void main(String[] args) {

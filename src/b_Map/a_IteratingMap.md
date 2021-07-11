@@ -4,7 +4,7 @@
 	map.put("employee3ID", 3);
 	map.put("employee4ID", 4);
 
-# 1 : Before Java 8 : 
+# 1 - Before Java 8 : 
   
 ## (a) Using External Iterators
 
@@ -56,7 +56,7 @@
 
 	    Note: Insertion Order is not Maintained: Use LinkedHashMap instead
   
-# 2 : Using Java 8 
+# 2 - Using Java 8 
 
 
 ## (a) Using Consumer @FunctionalInterface as Anonymous inner class :

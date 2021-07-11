@@ -37,7 +37,11 @@
     
         Map sortedMap = unsortedMap.entrySet().stream()
 	    .sorted(Map.Entry.comparingByKey())
-	    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(oldValue, newValue) -> oldValue, LinkedHashMap::new));
+	    .collect(Collectors.toMap(
+	              Map.Entry::getKey, 
+		      Map.Entry::getValue,
+		      (oldValue, newValue) -> oldValue, 
+		      LinkedHashMap::new));
 
         sortedMap.forEach((key, value) - > System.out.println(key + ":" + value));
 

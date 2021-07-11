@@ -8,53 +8,53 @@
   
 ## (a) Using External Iterators
 
-    ------------------------------
-    for-each-loop : using keySet
-    ------------------------------
+    --------------------------------------
+    Way 1 : for-each-loop : using keySet
+    --------------------------------------
     
-    for (String key: map.keySet()) {
-        System.out.println(key + ":" + map.get(key));
-    }
+	    for (String key: map.keySet()) {
+		System.out.println(key + ":" + map.get(key));
+	    }
 
-    Output:
-    employee2ID: 2
-    employee1ID: 1
-    employee4ID: 4
-    employee3ID: 3
+	    Output:
+	    employee2ID: 2
+	    employee1ID: 1
+	    employee4ID: 4
+	    employee3ID: 3
 
-    Note: Insertion Order is not Maintained: Use LinkedHashMap instead
+	    Note: Insertion Order is not Maintained: Use LinkedHashMap instead
     
-    ------------------------------
-    for-each-loop : using EntrySet
-    ------------------------------
+    --------------------------------------
+    Way 2 : for-each-loop : using EntrySet
+    --------------------------------------
 
-    for (Map.Entry < String, Integer > entry: map.entrySet()) {
-        System.out.println(entry.getKey() + ":" + entry.getValue());
-    }
+	    for (Map.Entry < String, Integer > entry: map.entrySet()) {
+		System.out.println(entry.getKey() + ":" + entry.getValue());
+	    }
 
-    Output:
-    employee2ID: 2
-    employee1ID: 1
-    employee4ID: 4
-    employee3ID: 3
+	    Output:
+	    employee2ID: 2
+	    employee1ID: 1
+	    employee4ID: 4
+	    employee3ID: 3
 
-    Note: Insertion Order is not Maintained: Use LinkedHashMap instead
+	    Note: Insertion Order is not Maintained: Use LinkedHashMap instead
 		
 ## (b) Using Internal Iterators  
 
-    Iterator < Map.Entry < String, Integer >> itr = map.entrySet().iterator();
-    while (itr.hasNext()) {
-        Map.Entry < String, Integer > entry = itr.next();
-        System.out.println(entry.getKey() + ":" + entry.getValue());
-    }
+	    Iterator < Map.Entry < String, Integer >> itr = map.entrySet().iterator();
+	    while (itr.hasNext()) {
+		Map.Entry < String, Integer > entry = itr.next();
+		System.out.println(entry.getKey() + ":" + entry.getValue());
+	    }
 
-    Output:
-    employee2ID: 2
-    employee1ID: 1
-    employee4ID: 4
-    employee3ID: 3
+	    Output:
+	    employee2ID: 2
+	    employee1ID: 1
+	    employee4ID: 4
+	    employee3ID: 3
 
-    Note: Insertion Order is not Maintained: Use LinkedHashMap instead
+	    Note: Insertion Order is not Maintained: Use LinkedHashMap instead
   
 # 2 : Using Java 8 
 

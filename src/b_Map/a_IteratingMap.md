@@ -28,7 +28,7 @@
     Way 2 : for-each-loop : using EntrySet
     --------------------------------------
 
-	    for (Map.Entry < String, Integer > entry: map.entrySet()) {
+	    for (Map.Entry<String,Integer> entry: map.entrySet()) {
 		System.out.println(entry.getKey() + ":" + entry.getValue());
 	    }
 

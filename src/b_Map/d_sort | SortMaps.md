@@ -40,7 +40,7 @@
 	    .collect(Collectors.toMap(
 	              Map.Entry::getKey, 
 		      Map.Entry::getValue,
-		      (oldValue, newValue) -> oldValue, 
+		      (e1, e2) -> e1,
 		      LinkedHashMap::new));
 
         sortedMap.forEach((key, value) - > System.out.println(key + ":" + value));

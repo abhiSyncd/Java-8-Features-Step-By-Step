@@ -1,13 +1,13 @@
 
 # 1 - Before Java 8
 
-	Map < String, Integer > map = new HashMap < String, Integer > ();
+	Map <String,Integer> map = new HashMap<>();
 	map.put("employee1ID", 1);
 	map.put("employee2ID", 2);
 	map.put("employee3ID", 3);
 	map.put("employee4ID", 4);
 
-	Map < String, Integer > transformedMap = new HashMap < String, Integer > ();
+	Map <String,Integer> transformedMap = new HashMap<>();
 
 	for (Map.Entry < String, Integer > entry: map.entrySet()) {
 	    transformedMap.put(entry.getKey(), entry.getValue() * 2);
@@ -28,17 +28,16 @@
 	
 # 2 : After Java 8
 
-	 Map < String, Integer > map = new HashMap < String, Integer > ();
+	 Map<String,Integer> map = new HashMap<>();
 	 map.put("employee1ID", 1);
 	 map.put("employee2ID", 2);
 	 map.put("employee3ID", 3);
 	 map.put("employee4ID", 4);
 
-	 Map < String, Integer > transformedMap = map.entrySet().stream()
-	     .collect(Collectors.toMap(x - > x.getKey(), x - > x.getValue() * 2));
+	 Map<String,Integer> transformedMap = map.entrySet().stream()
+	     .collect(Collectors.toMap(pair -> pair.getKey(), pair -> pair.getValue() * 2));
 
 	 System.out.println(transformedMap);
-
 
 
 	 Output: {

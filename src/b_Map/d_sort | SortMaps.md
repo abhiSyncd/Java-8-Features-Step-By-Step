@@ -40,16 +40,16 @@
     -----------------
     Ascending Order
     -----------------
-    
-        Map sortedMap = unsortedMap.entrySet().stream()
-	    .sorted((e1, e2) -> e1.getKey().compareTo(e2.getKey()))  // .sorted(Map.Entry.comparingByKey())
-	    .collect(Collectors.toMap(
-	              Map.Entry::getKey, 
-		      Map.Entry::getValue,
-		      (e1, e2) -> e1,
-		      LinkedHashMap::new));
 
-        sortedMap.forEach((key, value) - > System.out.println(key + ":" + value));
+        Map sortedMap = unsortedMap.entrySet().stream()
+            .sorted((e1, e2) -> e1.getKey().compareTo(e2.getKey())) // .sorted(Map.Entry.comparingByKey())
+            .collect(Collectors.toMap(
+                Map.Entry::getKey,
+                Map.Entry::getValue,
+                (e1, e2) -> e1,
+                LinkedHashMap::new));
+
+        sortedMap.forEach((key, value) -> System.out.println(key + ":" + value));
 	
     -----------------
     Descending Order
@@ -67,22 +67,22 @@
     -----------------
     Ascending Order
     -----------------
-
-        Map sortedMap = unsortedMap.entrySet().stream()
-            .sorted((e1, e2) -> e1.getValue().compareTo(e2.getValue()))   // .sorted(Map.Entry.comparingByValue())
-            .collect(Collectors.toMap(
-                      Map.Entry::getKey, 
-	              Map.Entry::getValue,
-	              (e1, e2) -> e1,
-	              LinkedHashMap::new));
-
-    sortedMap.forEach((key, value) - > System.out.println(key + ":" + value));
     
+	Map sortedMap = unsortedMap.entrySet().stream()
+	    .sorted((e1, e2) -> e1.getValue().compareTo(e2.getValue())) // .sorted(Map.Entry.comparingByValue())
+	    .collect(Collectors.toMap(
+		Map.Entry::getKey,
+		Map.Entry::getValue,
+		(e1, e2) -> e1,
+		LinkedHashMap::new));
+
+	sortedMap.forEach((key, value) -> System.out.println(key + ":" + value));
+
     -----------------
     Descending Order
-    -----------------  
-    .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))          OR
-    .sorted((Map.Entry.<String, Integer>comparingByValue().reversed()))
+    -----------------
+        .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))          OR
+        .sorted((Map.Entry.<String, Integer>comparingByValue().reversed()))
 
 
 

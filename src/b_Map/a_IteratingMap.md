@@ -6,10 +6,12 @@
 
 # 1 : Before Java 8 : 
   
-## Using External Iterators
+## (a) Using External Iterators
 
- **(a) for-each-loop : using keySet**
-
+    ------------------------------
+    for-each-loop : using keySet
+    ------------------------------
+    
     for (String key: map.keySet()) {
         System.out.println(key + ":" + map.get(key));
     }
@@ -22,7 +24,9 @@
 
     Note: Insertion Order is not Maintained: Use LinkedHashMap instead
     
-**(b) for-each-loop : using EntrySet**
+    ------------------------------
+    for-each-loop : using EntrySet
+    ------------------------------
 
     for (Map.Entry < String, Integer > entry: map.entrySet()) {
         System.out.println(entry.getKey() + ":" + entry.getValue());
@@ -36,7 +40,7 @@
 
     Note: Insertion Order is not Maintained: Use LinkedHashMap instead
 		
-## Using Internal Iterators  
+## (b) Using Internal Iterators  
 
     Iterator < Map.Entry < String, Integer >> itr = map.entrySet().iterator();
     while (itr.hasNext()) {

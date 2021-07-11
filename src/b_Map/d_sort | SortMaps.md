@@ -48,8 +48,9 @@
     -----------------
     Descending Order
     -----------------
+    
         .sorted((e1, e2) -> e2.getKey().compareTo(e1.getKey()))              OR
-	.sorted((Map.Entry.<String, Integer>comparingByValue().reversed()))
+        .sorted((Map.Entry.<String, Integer>comparingByValue().reversed()))
 
 # 
 	

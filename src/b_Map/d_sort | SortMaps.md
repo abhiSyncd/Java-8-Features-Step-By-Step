@@ -28,11 +28,6 @@
         sortedMap.putAll(unsortedMap);
         
         sortedMap.entrySet().forEach(System.out::println);
-	
-	Steps
-	> Convert a Map into a Stream
-	> Sort it
-	> Collect and return a new LinkedHashMap (keep the order)
 
 ## (b) Using LinkedHashMap
 
@@ -45,6 +40,13 @@
 	    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(oldValue, newValue) -> oldValue, LinkedHashMap::new));
 
         sortedMap.forEach((key, value) - > System.out.println(key + ":" + value));
+
+# 
+	
+	Steps
+	> Convert a Map into a Stream
+	> Sort it
+	> Collect and return a new LinkedHashMap (keep the order)
 
 
 # 2 - Sort By VALUE

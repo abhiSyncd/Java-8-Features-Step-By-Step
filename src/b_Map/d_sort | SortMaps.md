@@ -13,19 +13,21 @@
     -----------------------------------------------------------
     Ascending Order
     -----------------------------------------------------------
-    Map<String,Integer> sortedMap = new TreeMap<>(unsortedMap);  		
-    sortedMap.entrySet().forEach(System.out::println);
+    
+        Map<String,Integer> sortedMap = new TreeMap<>(unsortedMap);  		
+        sortedMap.entrySet().forEach(System.out::println);
 
     -----------------------------------------------------------
     Descending Order
     -----------------------------------------------------------
-    Map<String,Integer> sortedMap = new TreeMap<>((key1, key2) -> {
-        return key2.compareTo(key1);
-    });
+    
+        Map<String,Integer> sortedMap = new TreeMap<>((key1, key2) -> {
+            return key2.compareTo(key1);
+        });
         
-    sortedMap.putAll(unsortedMap);
+        sortedMap.putAll(unsortedMap);
         
-    sortedMap.entrySet().forEach(System.out::println);
+        sortedMap.entrySet().forEach(System.out::println);
 
 **(b) Using LinkedHashMap**
 

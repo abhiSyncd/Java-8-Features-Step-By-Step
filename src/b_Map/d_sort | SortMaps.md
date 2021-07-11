@@ -62,7 +62,7 @@
 
 # 2 - Sort By VALUE
 
-## Using LinkedHashMap
+## (a) Using LinkedHashMap
 
     -----------------
     Ascending Order

@@ -42,7 +42,7 @@
 		
 ## (b) Using Internal Iterators  
 
-	    Iterator < Map.Entry < String, Integer >> itr = map.entrySet().iterator();
+	    Iterator <Map.Entry<String,Integer>> itr = map.entrySet().iterator();
 	    while (itr.hasNext()) {
 		Map.Entry < String, Integer > entry = itr.next();
 		System.out.println(entry.getKey() + ":" + entry.getValue());
@@ -61,7 +61,7 @@
 
 ## (a) Using Consumer @FunctionalInterface as Anonymous inner class :
 
-    map.forEach(new BiConsumer < String, Integer > () {
+    map.forEach(new BiConsumer <String,Integer > () {
         public void accept(String key, Integer value) {
             System.out.println(key + ":" + value);
         }

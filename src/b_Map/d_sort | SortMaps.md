@@ -1,4 +1,5 @@
-    Map < String, Integer > unsortedMap = new HashMap < > ();
+    Map <String,Integer> unsortedMap = new HashMap<>();
+    
     unsortedMap.put("employee2", 2);
     unsortedMap.put("employee4", 4);
     unsortedMap.put("employee3", 3);

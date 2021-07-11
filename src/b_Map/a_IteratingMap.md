@@ -4,9 +4,11 @@
 	map.put("employee3ID", 3);
 	map.put("employee4ID", 4);
 
-# 1 : Before Java 8 : External Iterators 
+# 1 : Before Java 8 : 
   
-## (a) for-each-loop : using keySet
+## Using External Iterators
+
+ **(a) for-each-loop : using keySet**
 
     for (String key: map.keySet()) {
         System.out.println(key + ":" + map.get(key));
@@ -20,7 +22,7 @@
 
     Note: Insertion Order is not Maintained: Use LinkedHashMap instead
     
-## (b) for-each-loop : using EntrySet
+**(b) for-each-loop : using EntrySet**
 
     for (Map.Entry < String, Integer > entry: map.entrySet()) {
         System.out.println(entry.getKey() + ":" + entry.getValue());
@@ -34,9 +36,7 @@
 
     Note: Insertion Order is not Maintained: Use LinkedHashMap instead
 		
-## 2 :  Before Java 8 : Internal Iterators  
-	
-## (a) Using Iterator
+## Using Internal Iterators  
 
     Iterator < Map.Entry < String, Integer >> itr = map.entrySet().iterator();
     while (itr.hasNext()) {
@@ -52,7 +52,7 @@
 
     Note: Insertion Order is not Maintained: Use LinkedHashMap instead
   
-# 3 : Using Java 8 
+# 2 : Using Java 8 
 
 
 ## (a) Using Consumer @FunctionalInterface as Anonymous inner class :

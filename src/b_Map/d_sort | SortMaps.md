@@ -8,7 +8,7 @@
     
 # 1 - Sort By Key 
 
-**(a) Using TreeMap**
+## (a) Using TreeMap
 
     -----------------
     Ascending Order
@@ -29,7 +29,7 @@
         
         sortedMap.entrySet().forEach(System.out::println);
 
-**(b) Using LinkedHashMap**
+## (b) Using LinkedHashMap
 
     -----------------
     Ascending Order

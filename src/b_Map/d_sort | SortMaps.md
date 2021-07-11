@@ -27,8 +27,21 @@
         
         sortedMap.entrySet().forEach(System.out::println);
 
-**(b) Using Custom Comparator**
+**(b) Using LinkedHashMap**
 
+    --------------------
+    Ex) Ascending Order
+    --------------------
+		Map sortedMap = unsortedMap.entrySet().stream()
+		    .sorted(Map.Entry.comparingByKey())
+		    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(oldValue, newValue) -> oldValue, LinkedHashMap::new));
+
+
+		sortedMap.forEach((key, value) - > System.out.println(key + ":" + value));
+
+    --------------------
+    Ex) Descending Order
+    --------------------
 
 
 # 2 - Sort By Value

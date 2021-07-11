@@ -79,7 +79,8 @@
 
 ## (b) Using Lambda expression
 
-    map.forEach((key, value) - > System.out.println(key + ":" + value)); 
+    map.forEach((key, value) - > System.out.println(key + ":" + value));  OR 
+    map.entrySet().forEach(System.out::println)
 
     Output:
     employee2ID: 2

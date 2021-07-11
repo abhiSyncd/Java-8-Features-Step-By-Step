@@ -55,7 +55,7 @@
 # 
 	
 	Steps
-	> Convert a Map into a Stream
+	> Iterate Map using Streams
 	> Sort it
 	> Collect and return a new LinkedHashMap (keep the order)
 

@@ -44,6 +44,12 @@
 		      LinkedHashMap::new));
 
         sortedMap.forEach((key, value) - > System.out.println(key + ":" + value));
+	
+    -----------------
+    Descending Order
+    -----------------
+    
+	.sorted((Map.Entry.<String, Integer>comparingByValue().reversed()))
 
 # 
 	
@@ -55,6 +61,26 @@
 
 # 2 - Sort By VALUE
 
+    -----------------
+    Ascending Order
+    -----------------
+
+        Map sortedMap = unsortedMap.entrySet().stream()
+            .sorted((e1, e2) -> e1.getValue().compareTo(e2.getValue()))   // .sorted(Map.Entry.comparingByValue())
+            .collect(Collectors.toMap(
+                      Map.Entry::getKey, 
+	              Map.Entry::getValue,
+	              (e1, e2) -> e1,
+	              LinkedHashMap::new));
+
+    sortedMap.forEach((key, value) - > System.out.println(key + ":" + value));
+    
+    -----------------
+    Descending Order
+    -----------------  
+    .sorted((e1, e2) -> e2.getValue().compareTo(e1.getValue()))          OR
+    .sorted((Map.Entry.<String, Integer>comparingByValue().reversed()))
+
 
 
 
@@ -63,3 +89,4 @@
     Source :
     https://stackabuse.com/how-to-sort-a-hashmap-by-key-in-java
     https://pragmaticnotes.com/2017/08/10/benchmarking-approaches-to-sort-java-map-by-value/
+    https://dzone.com/articles/how-to-sort-a-map-by-value-in-java-8

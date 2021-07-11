@@ -36,7 +36,7 @@
     -----------------
     
         Map sortedMap = unsortedMap.entrySet().stream()
-	    .sorted(Map.Entry.comparingByKey())
+	    .sorted((e1, e2) -> e1.getKey().compareTo(e2.getKey()))  // .sorted(Map.Entry.comparingByKey())
 	    .collect(Collectors.toMap(
 	              Map.Entry::getKey, 
 		      Map.Entry::getValue,
@@ -48,7 +48,7 @@
     -----------------
     Descending Order
     -----------------
-    
+        .sorted((e1, e2) -> e2.getKey().compareTo(e1.getKey()))              OR
 	.sorted((Map.Entry.<String, Integer>comparingByValue().reversed()))
 
 # 

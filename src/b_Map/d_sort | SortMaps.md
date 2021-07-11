@@ -10,16 +10,16 @@
 
 **(a) Using TreeMap**
 
-    -----------------------------------------------------------
+    -----------------
     Ascending Order
-    -----------------------------------------------------------
+    -----------------
     
         Map<String,Integer> sortedMap = new TreeMap<>(unsortedMap);  		
         sortedMap.entrySet().forEach(System.out::println);
 
-    -----------------------------------------------------------
+    -----------------
     Descending Order
-    -----------------------------------------------------------
+    -----------------
     
         Map<String,Integer> sortedMap = new TreeMap<>((key1, key2) -> {
             return key2.compareTo(key1);
@@ -31,10 +31,11 @@
 
 **(b) Using LinkedHashMap**
 
-    -----------------------------------------------------------
+    -----------------
     Ascending Order
-    -----------------------------------------------------------
-    Map sortedMap = unsortedMap.entrySet().stream()
+    -----------------
+    
+        Map sortedMap = unsortedMap.entrySet().stream()
 	    .sorted(Map.Entry.comparingByKey())
 	    .collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(oldValue, newValue) -> oldValue, LinkedHashMap::new));
 

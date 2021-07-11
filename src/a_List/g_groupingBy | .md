@@ -11,7 +11,7 @@
       // Getters | Setters
     }
 
-**MyMain.java*8
+**MyMain.java8**
 
     public class MyMain {
 	public static void main(String[] args) {

@@ -41,10 +41,6 @@
 
         sortedMap.forEach((key, value) - > System.out.println(key + ":" + value));
 
-    ----------------
-    Descending Order
-    ----------------
-
 
 # 2 - Sort By VALUE
 

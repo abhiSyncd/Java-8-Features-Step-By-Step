@@ -6,7 +6,7 @@
     unsortedMap.put("employee1", 1);
     
     
-# 1 - Sort By Key 
+# 1 - Sort By KEY 
 
 ## (a) Using TreeMap
 
@@ -46,7 +46,7 @@
     ----------------
 
 
-# 2 - Sort By Value
+# 2 - Sort By VALUE
 
 
 

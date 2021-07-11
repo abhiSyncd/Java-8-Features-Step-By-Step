@@ -31,6 +31,12 @@
 
 ## (b) Using LinkedHashMap
 
+     Steps
+     > Iterate Map using Streams
+     > Sort it : Either By Key Or Value
+     > Collect and return a new LinkedHashMap (keep the order)
+
+#
     -----------------
     Ascending Order
     -----------------
@@ -52,12 +58,6 @@
         .sorted((e1, e2) -> e2.getKey().compareTo(e1.getKey()))              OR
         .sorted((Map.Entry.<String, Integer>comparingByValue().reversed()))
 
-# 
-	
-	Steps
-	> Iterate Map using Streams
-	> Sort it
-	> Collect and return a new LinkedHashMap (keep the order)
 
 
 # 2 - Sort By VALUE

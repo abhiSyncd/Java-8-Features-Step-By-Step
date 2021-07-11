@@ -1,4 +1,6 @@
-# Employee.java
+# Creating Mock Data
+
+## Employee.java
 
     public class Employee {  
       private String name;
@@ -9,7 +11,7 @@
       // Getters | Setters
     }
 
-# MyMain.java
+## MyMain.java
 
     public class MyMain {
 	public static void main(String[] args) {

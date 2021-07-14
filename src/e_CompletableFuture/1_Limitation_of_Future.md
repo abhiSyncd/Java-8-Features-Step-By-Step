@@ -94,7 +94,7 @@
 
 
 	Fore more Info Refer : 
-	https://github.com/abhiLinkd/Java-8-Features-Step-By-Step/blob/master/src/e_CompletableFuture/c_Attaching_Callback_To_CompletableFuture
+	https://github.com/abhiSyncd/Java-8-Features-Step-By-Step/blob/master/src/e_CompletableFuture/c_Attaching_Callback_To_CompletableFuture
 	https://www.callicoder.com/java-8-completablefuture-tutorial/
 
 
@@ -108,7 +108,7 @@
        
        We cannot combine multiple CompletableFuture together using CompletableFuture.allOf() method
        Example : Refer : 
-       https://github.com/abhiLinkd/Java-8-Features-Step-By-Step/blob/master/src/e_CompletableFuture/d_Combining_Multiple_CompletableFuture
+       https://github.com/abhiSyncd/Java-8-Features-Step-By-Step/blob/master/src/e_CompletableFuture/d_Combining_Multiple_CompletableFuture
 
 
 

@@ -16,7 +16,7 @@
 
 		But if there comes a scenario where you need to COMPLETE it manually, Future does not provides any methods to do so.
 		Refer : Section III - Using Lambda : For Future Example
-		        https://github.com/abhiLinkd/Java-Threads-Step-By-Step/tree/master/1-c-CreatingThreads-Callable-with-Future
+		        https://github.com/abhiSyncd/Java-Threads-Step-By-Step/tree/master/1-c-CreatingThreads-Callable-with-Future
 
 
 	   - CompletableFuture
